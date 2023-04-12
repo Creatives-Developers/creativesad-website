@@ -56,7 +56,7 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%) ;
-          z-index: -999;
+          z-index: 99999;
       }
 
 
@@ -75,14 +75,7 @@
 
 
       
-      .floaters {
-          width:100vw;
-          height:100vh;
-          position:absolute;
-          z-index: -99;
-          top:0px;
-          left:0px;
-      }
+
 
       .hero-container canvas {
           margin-top:-60px;
@@ -94,12 +87,7 @@
           animation: rote 120s linear infinite;
       }
 
-      @keyframes rote {
-          100% {
-              transform: translate(-50%, -50%) rotate(359deg);
-          }
-      }
-     
+  
 
   </style>
   
@@ -123,7 +111,7 @@
             
           </a>
 
-   
+
 
           <!-- Menu toggle -->
           <div id="menu-toggle" class="menu-toggle is-inactive magnetic-effect scheme-2 accent">
@@ -257,13 +245,6 @@
 
   
     
-    <div class="hero-container" id="particles-js">
-        
-        <img
-        id="logo"
-        src="./assets/icon.png"
-    >
-    </div>
 
 
 
@@ -331,12 +312,18 @@
             </div>
           </div>
           <!-- Image -->
+
+
+
           <div class="slide-image-wrapper">
             <div class="slide-image-inner">
-              <video  alt="Image name" class="slide-image bg-color accent" autoplay muted loop >
+
+              <div class="hero-container slide-image bg-color accent " id="particles-js"> <img id="logo" src="./assets/icon.png"> </div>
+
+              <!-- <video  alt="Image name" class="slide-image bg-color accent" autoplay muted loop >
                 <source src="assets/images/png/f-1.mp4">
 
-                </video>
+                </video> -->
             </div>
           </div>
           <!-- Action -->
