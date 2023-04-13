@@ -620,7 +620,7 @@ jQuery(function ($) {
   "use strict";
 
   window.onload = function () {
-    loadParticals();
+  
     lax.init();
 
     // Settings
@@ -744,6 +744,7 @@ jQuery(function ($) {
         },
       });
     });
+      loadParticals();
   };
 });
 
@@ -2112,7 +2113,7 @@ function loadParticals() {
   })(window);
 
   const nextParticle = new NextParticle({
-    image: document.all.logo,
+    image: document.images,
     width: window.innerWidth,
     height: window.innerHeight,
     maxHeight: 600,
@@ -2125,6 +2126,7 @@ function loadParticals() {
     // disableInteraction: true
   });
   window.onresize = function () {
+    console.log("resize")
     nextParticle.width = window.innerWidth;
     nextParticle.height = window.innerHeight;
     nextParticle.start();

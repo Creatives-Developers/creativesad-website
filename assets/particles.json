@@ -104,7 +104,8 @@
         "remove": {
           "particles_nb": 2
         }
-      }
+      },
+      "resize": true
     },
     "retina_detect": true
   }

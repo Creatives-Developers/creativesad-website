@@ -63,16 +63,15 @@
         width: 100%;
         height: 100%;
         pointer-events: auto;
-        /* z-index: 99999; */
+        z-index: 99999;
       }
 
       canvas {
-        /* position: absolute; */
-        /* z-index: inherit; */
-        width: 100%;
-      }
-      canvas:hover {
-        background: green;
+        /* pointer-events: auto;
+        position: absolute;
+        z-index: 99999;
+        max-width: 80%;
+        max-height: 80%; */
       }
     </style>
   </head>
@@ -340,7 +339,7 @@
       <section
         id="home"
         class="shock-section dynamic-slider scheme-1"
-        data-autoplay="10000"
+        data-autoplay="10000000000"
       >
         <!-- Index -->
         <div id="slide-index" class="slide-index">
@@ -414,10 +413,15 @@
           <!-- Image -->
           <div class="slide-image-wrapper">
             <div class="slide-image-inner">
-              <div class="slide-image bg-color  hero-container">
+              <div class="slide-image bg-color hero-container">
                 <img
                   id="logo"
-                  class="next-particle "
+                  class="next-particle"
+                  
+                  data-width="800"
+                  data-height="570"
+                  data-min-width="400"
+                  data-min-height="400"
                   src="./assets/icon.png"
                 />
               </div>
@@ -528,10 +532,14 @@
           <div class="slide-image-wrapper">
             <div class="slide-image-inner">
               <!-- <img src="assets/images/png/f-2.png" alt="Image name" class="slide-image bg-color accent" /> -->
-              <div class="slide-image bg-color  hero-container">
+              <div class="hero-container">
                 <img
                   id="logo"
-                  class="next-particle "
+                  class="next-particle"
+                  data-width="800"
+                  data-height="570"
+                  data-min-width="350"
+                  data-min-height="350"
                   src="./assets/icon.png"
                 />
               </div>
@@ -1609,12 +1617,7 @@
       <circle class="cursor-effect-inner" cx="110" cy="110" r="20"></circle>
     </svg>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script type="text/javascript">
-      particlesJS.load("particles-js", "./assets/particles.json", function () {
-        console.log("callback - particles.js config loaded");
-      });
-    </script>
+
 
     <!-- Vendor JavaScript -->
     <script src="./assets/js/vendor/jquery.min.js"></script>
@@ -1639,6 +1642,12 @@
     <script src="./assets/js/vendor/lax.min.js"></script>
     <script src="./assets/js/vendor/cursor-effect.min.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript">
+      particlesJS.load("particles-js", "./assets/particles.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
+    </script>
     <!-- Main JavaScript -->
     <script src="./assets/js/main.js"></script>
   </body>
