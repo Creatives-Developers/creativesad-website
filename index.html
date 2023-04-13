@@ -1,26 +1,31 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
   <head>
-
     <!-- Display -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
     <!-- Identity -->
     <title>C&D</title>
-    <meta name="description" content=" creatives and developers
+    <meta
+      name="description"
+      content=" creatives and developers
     As an ever-changing marketing & advertising agency, we bring you active solutions that fit your marketing dynamics creating a differential growth to businesses of the GCC region.
 
     We bring smart solutions to detailed strategies.   
-    ">
-    <meta name="author" content="Codings">
-    
-    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon" />
-  
+    "
+    />
+    <meta name="author" content="Codings" />
+
+    <link
+      rel="shortcut icon"
+      href="assets/images/icon.png"
+      type="image/x-icon"
+    />
+
     <!-- Vendor Style Sheet -->
     <link rel="stylesheet" href="assets/css/vendor/font-family.min.css" />
-    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />  
+    <link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/menu-engine.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/menu-grid.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
@@ -29,7 +34,7 @@
     <link rel="stylesheet" href="assets/css/vendor/bricklayer.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/lightbox.min.css" />
     <link rel="stylesheet" href="assets/css/vendor/aos.min.css" />
-  
+
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="assets/css/theme.css" />
     <link rel="stylesheet" href="assets/css/core.css" />
@@ -37,93 +42,72 @@
 
     <style>
       @font-face {
-          font-family: MaaxMedium;
-          src: url("./assets/fonts/MaaxMedium/MaaxMedium.woff2");
+        font-family: MaaxMedium;
+        src: url("./assets/fonts/MaaxMedium/MaaxMedium.woff2");
       }
       @font-face {
-          font-family: MaaxRegular;
-          src: url("./assets/fonts/MaaxRegular/MaaxRegular.woff2");
+        font-family: MaaxRegular;
+        src: url("./assets/fonts/MaaxRegular/MaaxRegular.woff2");
       }
-
-
 
       #logo {
-            display: none;
-        }
-
-        
-
-      canvas {
-          /* position: absolute; */
-          /* top: 50%;
-          left: 50%; */
-          /* transform: translate(-50%, -50%) ; */
-          z-index: 99999;
+        display: none;
       }
-
 
       .hero-container {
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          flex-wrap:wrap;
-          /* position:absolute;
-          top:50%;
-          left:50%;
-          transform: translate(-50%, -50%);
-           */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        pointer-events: auto;
+        /* z-index: 99999; */
       }
 
-
-
-      
-
-
-      .hero-container canvas {
-          margin-top:-60px;
+      canvas {
+        /* position: absolute; */
+        /* z-index: inherit; */
+        width: 100%;
       }
-
-
-
-      .working {
-          animation: rote 120s linear infinite;
+      canvas:hover {
+        background: green;
       }
-
-  
-
-  </style>
-  
+    </style>
   </head>
 
   <body class="shock-body">
-
     <!-- Preloader -->
-    <div id="preloader" class="preloader black" data-bg-image="assets/images/logo-white.svg"></div>
+    <div
+      id="preloader"
+      class="preloader black"
+      data-bg-image="assets/images/logo-white.svg"
+    ></div>
 
     <!-- Header -->
 
-
-    
-    <header id="header" class="shock-header">  
-
-      
-
-
+    <header id="header" class="shock-header">
       <!-- Navbar -->
       <nav id="navbar" class="navbar navbar-expand-lg absolute">
-        <div class="container-fluid" >
+        <div class="container-fluid">
           <!-- Brand -->
-          <a class="navbar-brand magnetic-effect " href="/">
-          
+          <a class="navbar-brand magnetic-effect" href="/">
             <!-- <div class="site-title">Site Title</div> -->
-            <img src="assets/images/logo.gif" data-logo-alt="assets/images/logo.gif" data-logo-mobile="assets/images/logo.gif" alt="Shock Theme" class="logo" />
-            
+            <img
+              src="assets/images/logo.gif"
+              data-logo-alt="assets/images/logo.gif"
+              data-logo-mobile="assets/images/logo.gif"
+              alt="Shock Theme"
+              class="logo"
+            />
           </a>
 
-
-
           <!-- Menu toggle -->
-          <div id="menu-toggle" class="menu-toggle is-inactive magnetic-effect scheme-2 accent">
+          <div
+            id="menu-toggle"
+            class="menu-toggle is-inactive magnetic-effect scheme-2 accent"
+          >
             <div class="menu-toggle-icon">
               <div class="menu-toggle-container">
                 <span class="menu-toggle-line-top"></span>
@@ -133,12 +117,24 @@
             </div>
             <div class="menu-toggle-circle">
               <svg class="menu-toggle-menu-toggle-svg-circle">
-                <path class="menu-toggle-path-circle" fill="none" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+                <path
+                  class="menu-toggle-path-circle"
+                  fill="none"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"
+                />
               </svg>
             </div>
             <svg width="0" height="0">
               <mask id="menu-toggle-mask">
-                <path class="path-mask" fill="none" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+                <path
+                  class="path-mask"
+                  fill="none"
+                  stroke-miterlimit="10"
+                  stroke-width="4"
+                  d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4"
+                />
               </mask>
             </svg>
             <div class="menu-toggle-path">
@@ -167,20 +163,42 @@
                 </div>
                 <!-- Main menu -->
                 <div class="menu-grid-main">
-                  <a href="#your-link" class="menu-grid-main-item menu-item">Stories</a>
-                  <a href="#your-link" class="menu-grid-main-item menu-item">Portfolio</a>
-                  <a href="#your-link" class="menu-grid-main-item menu-item">Insights</a>
-                  <a href="#your-link" class="menu-grid-main-item menu-item">Contact</a>
-                </div> 
+                  <a href="#your-link" class="menu-grid-main-item menu-item"
+                    >Stories</a
+                  >
+                  <a href="#your-link" class="menu-grid-main-item menu-item"
+                    >Portfolio</a
+                  >
+                  <a href="#your-link" class="menu-grid-main-item menu-item"
+                    >Insights</a
+                  >
+                  <a href="#your-link" class="menu-grid-main-item menu-item"
+                    >Contact</a
+                  >
+                </div>
                 <!-- Form -->
                 <div class="menu-grid-search focus-trigger">
                   <div class="form-area scheme-2 white">
-                    <form class="form-fields needs-validation" novalidate="novalidate">
+                    <form
+                      class="form-fields needs-validation"
+                      novalidate="novalidate"
+                    >
                       <div class="form-row row has-icon">
                         <div class="form-col form-floating">
-                          <button class="button overlay-button"><i class="fa-solid fa-magnifying-glass overlay-icon"></i></button>
-                          <input id="InputSearchMenu" class="form-control focus-trigger-field" placeholder="Type keywords..." required="required">
-                          <label for="InputSearchMenu" class="form-label">Type keywords...</label>
+                          <button class="button overlay-button">
+                            <i
+                              class="fa-solid fa-magnifying-glass overlay-icon"
+                            ></i>
+                          </button>
+                          <input
+                            id="InputSearchMenu"
+                            class="form-control focus-trigger-field"
+                            placeholder="Type keywords..."
+                            required="required"
+                          />
+                          <label for="InputSearchMenu" class="form-label"
+                            >Type keywords...</label
+                          >
                         </div>
                       </div>
                     </form>
@@ -192,7 +210,11 @@
               <div class="menu-grid-item-inner">
                 <!-- Image -->
                 <a href="#your-link" class="menu-grid-item-image">
-                  <img src="assets/images/jpg/c-22.jpg" alt="Image name" class="image" />
+                  <img
+                    src="assets/images/jpg/c-22.jpg"
+                    alt="Image name"
+                    class="image"
+                  />
                   <span class="title">View Portfolio</span>
                 </a>
               </div>
@@ -208,12 +230,48 @@
                 </div>
                 <!-- Links -->
                 <div class="menu-grid-minor">
-                  <a href="#your-link" class="menu-grid-minor-item menu-item"><span class="menu-grid-minor-item-inner" style="pointer-events: none; cursor: default;" >Photography</span></a>
-                  <a href="#your-link" class="menu-grid-minor-item menu-item"><span class="menu-grid-minor-item-inner" style="pointer-events: none; cursor: default;" >Art Direction</span></a>
-                  <a href="#your-link" class="menu-grid-minor-item menu-item"><span class="menu-grid-minor-item-inner" style="pointer-events: none; cursor: default;" >Graphic Design</span></a>
-                  <a href="#your-link" class="menu-grid-minor-item menu-item"><span class="menu-grid-minor-item-inner" style="pointer-events: none; cursor: default;" >Brand Creation</span></a>
-                  <a href="#your-link" class="menu-grid-minor-item menu-item"><span class="menu-grid-minor-item-inner" style="pointer-events: none; cursor: default;" >Social Media</span></a>
-                  <a href="#your-link" class="menu-grid-minor-item menu-item"><span class="menu-grid-minor-item-inner" style="pointer-events: none; cursor: default;" >Marketing Digital</span></a>
+                  <a href="#your-link" class="menu-grid-minor-item menu-item"
+                    ><span
+                      class="menu-grid-minor-item-inner"
+                      style="pointer-events: none; cursor: default"
+                      >Photography</span
+                    ></a
+                  >
+                  <a href="#your-link" class="menu-grid-minor-item menu-item"
+                    ><span
+                      class="menu-grid-minor-item-inner"
+                      style="pointer-events: none; cursor: default"
+                      >Art Direction</span
+                    ></a
+                  >
+                  <a href="#your-link" class="menu-grid-minor-item menu-item"
+                    ><span
+                      class="menu-grid-minor-item-inner"
+                      style="pointer-events: none; cursor: default"
+                      >Graphic Design</span
+                    ></a
+                  >
+                  <a href="#your-link" class="menu-grid-minor-item menu-item"
+                    ><span
+                      class="menu-grid-minor-item-inner"
+                      style="pointer-events: none; cursor: default"
+                      >Brand Creation</span
+                    ></a
+                  >
+                  <a href="#your-link" class="menu-grid-minor-item menu-item"
+                    ><span
+                      class="menu-grid-minor-item-inner"
+                      style="pointer-events: none; cursor: default"
+                      >Social Media</span
+                    ></a
+                  >
+                  <a href="#your-link" class="menu-grid-minor-item menu-item"
+                    ><span
+                      class="menu-grid-minor-item-inner"
+                      style="pointer-events: none; cursor: default"
+                      >Marketing Digital</span
+                    ></a
+                  >
                 </div>
               </div>
             </div>
@@ -221,8 +279,12 @@
               <div class="menu-grid-item-inner">
                 <!-- Image -->
                 <a href="#your-link" class="menu-grid-item-image">
-                  <img src="assets/images/jpg/c-16.jpg" alt="Image name" class="image" />
-                  <span class="title">View Routes</span>                
+                  <img
+                    src="assets/images/jpg/c-16.jpg"
+                    alt="Image name"
+                    class="image"
+                  />
+                  <span class="title">View Routes</span>
                 </a>
               </div>
             </div>
@@ -230,42 +292,56 @@
               <div class="menu-grid-item-inner">
                 <!-- Contacts -->
                 <div class="menu-grid-minor">
-                  <a href="tel:+19912345678" class="menu-grid-minor-item"><span class="menu-grid-minor-item-inner"><i class="fas fa-mobile-alt icon"></i>+1 (99) 1234 5678</span></a>
-                  <a href="tel:+19812345678" class="menu-grid-minor-item"><span class="menu-grid-minor-item-inner"><i class="fas fa-phone-alt icon"></i>+1 (98) 1234 5678</span></a>
-                  <a href="mailto:contact@mail.com" class="menu-grid-minor-item"><span class="menu-grid-minor-item-inner"><i class="fas fa-envelope icon"></i>contact@mail.com</span></a>
+                  <a href="tel:+19912345678" class="menu-grid-minor-item"
+                    ><span class="menu-grid-minor-item-inner"
+                      ><i class="fas fa-mobile-alt icon"></i>+1 (99) 1234
+                      5678</span
+                    ></a
+                  >
+                  <a href="tel:+19812345678" class="menu-grid-minor-item"
+                    ><span class="menu-grid-minor-item-inner"
+                      ><i class="fas fa-phone-alt icon"></i>+1 (98) 1234
+                      5678</span
+                    ></a
+                  >
+                  <a href="mailto:contact@mail.com" class="menu-grid-minor-item"
+                    ><span class="menu-grid-minor-item-inner"
+                      ><i class="fas fa-envelope icon"></i
+                      >contact@mail.com</span
+                    ></a
+                  >
                   <div class="menu-grid-icons">
-                    <a href="#your-link" class="menu-grid-minor-item"><span class="menu-grid-minor-item-inner"><i class="fab fa-facebook-f icon"></i></span></a>
-                    <a href="#your-link" class="menu-grid-minor-item"><span class="menu-grid-minor-item-inner"><i class="fab fa-twitter icon"></i></span></a>
-                    <a href="#your-link" class="menu-grid-minor-item"><span class="menu-grid-minor-item-inner"><i class="fab fa-linkedin-in icon"></i></span></a>
+                    <a href="#your-link" class="menu-grid-minor-item"
+                      ><span class="menu-grid-minor-item-inner"
+                        ><i class="fab fa-facebook-f icon"></i></span
+                    ></a>
+                    <a href="#your-link" class="menu-grid-minor-item"
+                      ><span class="menu-grid-minor-item-inner"
+                        ><i class="fab fa-twitter icon"></i></span
+                    ></a>
+                    <a href="#your-link" class="menu-grid-minor-item"
+                      ><span class="menu-grid-minor-item-inner"
+                        ><i class="fab fa-linkedin-in icon"></i></span
+                    ></a>
                   </div>
                 </div>
               </div>
             </div>
           </nav>
         </div>
-      </nav>   
-      
+      </nav>
     </header>
-
-    
 
     <!-- Main -->
 
-
-
-
-
-  
-    
-
-
-
     <main id="main" class="shock-main">
-      
-
       <!-- Dynamic slider -->
-      
-      <section id="home" class="shock-section dynamic-slider scheme-1" data-autoplay="10000">
+
+      <section
+        id="home"
+        class="shock-section dynamic-slider scheme-1"
+        data-autoplay="10000"
+      >
         <!-- Index -->
         <div id="slide-index" class="slide-index">
           <span class="slide-index-current">
@@ -275,7 +351,6 @@
         </div>
         <!-- Navigation -->
 
-        
         <nav class="slide-navigation">
           <a href="#home" class="slide-navigation-item-prev">
             <span class="arrow-button prev scheme-1 primary">
@@ -299,15 +374,18 @@
           </a>
         </nav>
         <!-- Info toggle -->
-        <div class="slide-info-menu parent">    
-          <div id="slide-info-toggle" class="slide-info-toggle" style="display: none;">
+        <div class="slide-info-menu parent">
+          <div
+            id="slide-info-toggle"
+            class="slide-info-toggle"
+            style="display: none"
+          >
             <span class="arrow-button cross scheme-2 primary">
               <span class="arrow">
                 <span class="item"></span>
                 <span class="item"></span>
               </span>
               <span class="line"></span>
-              
             </span>
           </div>
           <span class="slide-info-menu-close"></span>
@@ -317,26 +395,32 @@
           <!-- Intro -->
           <div class="slide-content">
             <span class="slide-title text-1 text-style-1 black">Design</span>
-            
+
             <div class="slide-description">
-              <span class="text-2 text-style-4 text-italic black">is <mark class="animated-underline primary ">everything</mark> !</span>
-              <div class="description gray ">
-                <p>As an ever-changing marketing & advertising agency, we bring you active solutions that fit your marketing dynamics creating a differential growth to businesses of the GCC region.</p>
+              <span class="text-2 text-style-4 text-italic black"
+                >is
+                <mark class="animated-underline primary">everything</mark>
+                !</span
+              >
+              <div class="description gray">
+                <p>
+                  As an ever-changing marketing & advertising agency, we bring
+                  you active solutions that fit your marketing dynamics creating
+                  a differential growth to businesses of the GCC region.
+                </p>
               </div>
             </div>
           </div>
           <!-- Image -->
-
-
-
           <div class="slide-image-wrapper">
             <div class="slide-image-inner">
-
-              <div class="hero-container slide-image bg-color " id="particles-js"> <img id="logo" src="./assets/icon.png"> </div>
-
-
-            
-
+              <div class="slide-image bg-color  hero-container">
+                <img
+                  id="logo"
+                  class="next-particle "
+                  src="./assets/icon.png"
+                />
+              </div>
               <!-- <video  alt="Image name" class="slide-image bg-color accent" autoplay muted loop >
                 <source src="assets/images/png/f-1.mp4">
 
@@ -347,34 +431,75 @@
           <div class="slide-action">
             <div class="slide-action-inner">
               <span class="slide-action-title">What are you waiting for?</span>
-              <a href="#modal" class="slide-action-link animated-text scheme-1 primary" data-bs-toggle="modal" data-bs-target="#modal">Explore Features</a>
+              <a
+                href="#modal"
+                class="slide-action-link animated-text scheme-1 primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+                >Explore Features</a
+              >
             </div>
           </div>
           <!-- Info menu -->
-          <div class="slide-info" style="display: none;">
+          <div class="slide-info" style="display: none">
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Product Design <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">A broad and effective coefficient of generating and developing<span class="ellipse">...</span><br> ideas through a process that leads to new products.</span>
+              <h3 class="slide-info-title">
+                Product Design <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >A broad and effective coefficient of generating and
+                developing<span class="ellipse">...</span><br />
+                ideas through a process that leads to new products.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Brand Creation <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">Through innovative concepts we develop the brand's strategy<span class="ellipse">...</span><br> and history in order to give the company authority.</span>
+              <h3 class="slide-info-title">
+                Brand Creation <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >Through innovative concepts we develop the brand's
+                strategy<span class="ellipse">...</span><br />
+                and history in order to give the company authority.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Video Production <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">Structured video editing to present all project information, including movies and television shows, ads and advertising.</span>
+              <h3 class="slide-info-title">
+                Video Production <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >Structured video editing to present all project information,
+                including movies and television shows, ads and
+                advertising.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Digital Marketing <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">We integrate digital channels such as search engines, social media, email and other websites to attract potential customers.</span>
+              <h3 class="slide-info-title">
+                Digital Marketing <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >We integrate digital channels such as search engines, social
+                media, email and other websites to attract potential
+                customers.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Artistic Photography <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">Whether for a casual or event corporate, looking for a professional makes all the difference.</span>
+              <h3 class="slide-info-title">
+                Artistic Photography <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >Whether for a casual or event corporate, looking for a
+                professional makes all the difference.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Game Development <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">One of the most profitable digital segments in the world requires a creative and specialized team to make your idea a reality.</span>
+              <h3 class="slide-info-title">
+                Game Development <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >One of the most profitable digital segments in the world
+                requires a creative and specialized team to make your idea a
+                reality.</span
+              >
             </a>
           </div>
           <!-- Expander -->
@@ -386,62 +511,120 @@
           <div class="slide-content">
             <span class="slide-title text-1 text-style-1 black">Service</span>
             <div class="slide-description">
-              <span class="text-2 text-style-4 text-italic black">custom <mark class="animated-underline primary ">made</mark> !</span>
+              <span class="text-2 text-style-4 text-italic black"
+                >custom
+                <mark class="animated-underline primary">made</mark> !</span
+              >
               <div class="description gray">
-                <p>To connect the brand with the target audience, it is necessary to observe each shape, color, font and style that will compose a subconscious message.</p>
+                <p>
+                  To connect the brand with the target audience, it is necessary
+                  to observe each shape, color, font and style that will compose
+                  a subconscious message.
+                </p>
               </div>
             </div>
           </div>
           <!-- Image -->
           <div class="slide-image-wrapper">
             <div class="slide-image-inner">
-              <img src="assets/images/png/f-2.png" alt="Image name" class="slide-image bg-color accent" />
+              <!-- <img src="assets/images/png/f-2.png" alt="Image name" class="slide-image bg-color accent" /> -->
+              <div class="slide-image bg-color  hero-container">
+                <img
+                  id="logo"
+                  class="next-particle "
+                  src="./assets/icon.png"
+                />
+              </div>
             </div>
           </div>
           <!-- Action -->
           <div class="slide-action">
             <div class="slide-action-inner">
               <span class="slide-action-title">Will you miss this chance?</span>
-              <a href="#your-link" class="slide-action-link animated-text scheme-1 primary" data-bs-toggle="modal" data-bs-target="#modal">Get Started</a>
+              <a
+                href="#your-link"
+                class="slide-action-link animated-text scheme-1 primary"
+                data-bs-toggle="modal"
+                data-bs-target="#modal"
+                >Get Started</a
+              >
             </div>
           </div>
           <!-- Info menu -->
-          <div class="slide-info" style="display: none;">
+          <div class="slide-info" style="display: none">
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Website Premium <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">The website is the first contact<span class="ellipse">...</span><br> a consumer will have with your brand. For this reason, it is very important.</span>
+              <h3 class="slide-info-title">
+                Website Premium <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >The website is the first contact<span class="ellipse">...</span
+                ><br />
+                a consumer will have with your brand. For this reason, it is
+                very important.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Mobile App <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">The technology must be invisible<span class="ellipse">...</span> to the user's eyes. Other than that, it is very important to think of the mobile app.</span>
+              <h3 class="slide-info-title">
+                Mobile App <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >The technology must be invisible<span class="ellipse"
+                  >...</span
+                >
+                to the user's eyes. Other than that, it is very important to
+                think of the mobile app.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Online Store <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">An online business allows customers to access products at any time using an electronic device with internet access.</span>
+              <h3 class="slide-info-title">
+                Online Store <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >An online business allows customers to access products at any
+                time using an electronic device with internet access.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Product Design <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">A broad and effective coefficient of generating and developing<span class="ellipse">...</span><br> ideas through a process that leads to new products.</span>
+              <h3 class="slide-info-title">
+                Product Design <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >A broad and effective coefficient of generating and
+                developing<span class="ellipse">...</span><br />
+                ideas through a process that leads to new products.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Brand Creation <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">Through innovative concepts we develop the brand's strategy<span class="ellipse">...</span><br> and history in order to give the company authority.</span>
+              <h3 class="slide-info-title">
+                Brand Creation <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >Through innovative concepts we develop the brand's
+                strategy<span class="ellipse">...</span><br />
+                and history in order to give the company authority.</span
+              >
             </a>
             <a href="#your-link" class="slide-info-item">
-              <h3 class="slide-info-title">Video Production <i class="fas fa-chevron-right icon"></i></h3>
-              <span class="slide-info-detail">Structured video editing to present all project information, including movies and television shows, ads and advertising.</span>
+              <h3 class="slide-info-title">
+                Video Production <i class="fas fa-chevron-right icon"></i>
+              </h3>
+              <span class="slide-info-detail"
+                >Structured video editing to present all project information,
+                including movies and television shows, ads and
+                advertising.</span
+              >
             </a>
           </div>
           <!-- Expander -->
           <div class="slide-expander"></div>
         </div>
-
-
       </section>
-      
 
       <!-- Scrolling text -->
-      <section class="shock-section" style="padding-bottom: 10 vh; padding-top: 10vh;">
+      <section
+        class="shock-section"
+        style="padding-bottom: 10 vh; padding-top: 10vh"
+      >
         <div class="scrolling-text has-image">
           <!-- Image -->
           <!-- <div class="image-wrapper max-w-25 mb-5 magnetic-effect">
@@ -453,58 +636,121 @@
           </div> -->
           <!-- Text -->
           <div class="text-wrapper mix-blend-lighter">
-            <h2 class="text text-style-1 text-outline gray-75 " data-lax="h-left">We bring smart solutions to detailed strategies.   </h2>
-            <h3 class="text text-style-8 text-italic gray-75 " data-lax="h-right" >We bring smart solutions to detailed strategies.   We bring smart solutions to detailed strategies.   We bring smart solutions to detailed strategies.   </h3>
-          </div>    
+            <h2
+              class="text text-style-1 text-outline gray-75"
+              data-lax="h-left"
+            >
+              We bring smart solutions to detailed strategies.
+            </h2>
+            <h3
+              class="text text-style-8 text-italic gray-75"
+              data-lax="h-right"
+            >
+              We bring smart solutions to detailed strategies. We bring smart
+              solutions to detailed strategies. We bring smart solutions to
+              detailed strategies.
+            </h3>
+          </div>
         </div>
       </section>
 
       <!-- Progress bar / Carousel -->
-      <section class="shock-section pt-2 pb-4" style="padding-top: 15vh !important;">
+      <section
+        class="shock-section pt-2 pb-4"
+        style="padding-top: 15vh !important"
+      >
         <div class="container">
           <div class="row g-4">
-            <div class="col-12 col-lg-7 align-v-center" data-aos="zoom-in-up" data-aos-delay="300">
+            <div
+              class="col-12 col-lg-7 align-v-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="300"
+            >
               <div class="holder">
                 <!-- Intro -->
                 <div class="basic-intro mb-35">
                   <h2 class="title black">
                     <span class="text-1 text-style-7">We seek </span>
-                    <span class="text-2 text-style-8 text-italic ">the <mark class="animated-underline accent " style="color: #005889;">extraordinary</mark>.</span>
+                    <span class="text-2 text-style-8 text-italic"
+                      >the
+                      <mark
+                        class="animated-underline accent"
+                        style="color: #005889"
+                        >extraordinary</mark
+                      >.</span
+                    >
                   </h2>
                   <div class="description gray">
-                    <p>We provide our art to ensure that human insights work well together with technology, brand and business, with a focus on fast and assertive results.</p>
-                    <p>Our mission is to give our customers products that will transform the way people see the world. Turning an idea into something that works is what moves us.</p>
+                    <p>
+                      We provide our art to ensure that human insights work well
+                      together with technology, brand and business, with a focus
+                      on fast and assertive results.
+                    </p>
+                    <p>
+                      Our mission is to give our customers products that will
+                      transform the way people see the world. Turning an idea
+                      into something that works is what moves us.
+                    </p>
                   </div>
                 </div>
-
               </div>
             </div>
-            <div class="col-12 col-lg-5" data-aos="zoom-in-up" data-aos-delay="600">
+            <div
+              class="col-12 col-lg-5"
+              data-aos="zoom-in-up"
+              data-aos-delay="600"
+            >
               <!-- Circular text -->
               <!-- <div class="circular-text">
                 <div class="emblem to-top-left mix-blend-lighter gray-75">Consistent•Design•</div>
               </div> -->
               <!-- Carousel -->
-              <div class="gallery swiper slider has-navigation has-scrollbar scheme-1 primary" data-columns="1,1,1,1" data-autoplay="2000" data-loop="true">
+              <div
+                class="gallery swiper slider has-navigation has-scrollbar scheme-1 primary"
+                data-columns="1,1,1,1"
+                data-autoplay="2000"
+                data-loop="true"
+              >
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="assets/images/jpg/b-10.jpg" class="item lightbox-link hover-zoom-rotate">
+                    <a
+                      href="assets/images/jpg/b-10.jpg"
+                      class="item lightbox-link hover-zoom-rotate"
+                    >
                       <div class="image-wrapper">
-                        <img src="assets/images/jpg/b-10.jpg" class="image" alt="This is an example description for this item." />
+                        <img
+                          src="assets/images/jpg/b-10.jpg"
+                          class="image"
+                          alt="This is an example description for this item."
+                        />
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="assets/images/jpg/b-16.jpg" class="item lightbox-link hover-zoom-rotate">
+                    <a
+                      href="assets/images/jpg/b-16.jpg"
+                      class="item lightbox-link hover-zoom-rotate"
+                    >
                       <div class="image-wrapper">
-                        <img src="assets/images/jpg/b-16.jpg" class="image" alt="This is an example description for this item." />
+                        <img
+                          src="assets/images/jpg/b-16.jpg"
+                          class="image"
+                          alt="This is an example description for this item."
+                        />
                       </div>
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="assets/images/jpg/b-10.jpg" class="item lightbox-link hover-zoom-rotate">
+                    <a
+                      href="assets/images/jpg/b-10.jpg"
+                      class="item lightbox-link hover-zoom-rotate"
+                    >
                       <div class="image-wrapper">
-                        <img src="assets/images/jpg/b-10.jpg" class="image" alt="This is an example description for this item." />
+                        <img
+                          src="assets/images/jpg/b-10.jpg"
+                          class="image"
+                          alt="This is an example description for this item."
+                        />
                       </div>
                     </a>
                   </div>
@@ -526,9 +772,16 @@
               <!-- Image -->
               <div class="gallery image-mirror align-h-left">
                 <div class="image-wrapper">
-                  <img src="assets/images/jpg/b-34.jpg" alt="Image name" class="image shadow" />
+                  <img
+                    src="assets/images/jpg/b-34.jpg"
+                    alt="Image name"
+                    class="image shadow"
+                  />
                 </div>
-                <a href="assets/images/jpg/b-34.jpg" class="mirror-button lightbox-link magnetic-effect">
+                <a
+                  href="assets/images/jpg/b-34.jpg"
+                  class="mirror-button lightbox-link magnetic-effect"
+                >
                   <i class="fa-solid fa-circle-play mirror-icon primary"></i>
                 </a>
               </div>
@@ -538,22 +791,33 @@
               <div class="side-intro">
                 <h1 class="title text-style-1 text-offset">
                   <span class="text-1 filled black">We build</span>
-                  <span class="text-1 outline black" data-lax="inertia-top">We build</span>
+                  <span class="text-1 outline black" data-lax="inertia-top"
+                    >We build</span
+                  >
                 </h1>
-                <span class="text-2 text-style-4 fw-400 text-outline text-italic black">amazing <span class="typed-text"></span></span>
+                <span
+                  class="text-2 text-style-4 fw-400 text-outline text-italic black"
+                  >amazing <span class="typed-text"></span
+                ></span>
                 <!-- Srings -->
                 <div id="typed-strings">
                   <span>projects</span>
                   <span>things</span>
                   <span>dreams</span>
-                </div>  
+                </div>
                 <div class="description gray">
-                  <p>Design is a concept that represents the process of creating products based on technical and aesthetic excellence, with the aim of solving problems.</p>
+                  <p>
+                    Design is a concept that represents the process of creating
+                    products based on technical and aesthetic excellence, with
+                    the aim of solving problems.
+                  </p>
                 </div>
                 <!-- Button -->
                 <a href="#" class="button double-edge transparent black-hover">
                   <span class="button-text black white-hover">Get Started</span>
-                  <i class="fa-solid fa-arrow-right button-icon black white-hover"></i>
+                  <i
+                    class="fa-solid fa-arrow-right button-icon black white-hover"
+                  ></i>
                   <span class="overlay gray-50 magnetic-effect"></span>
                 </a>
               </div>
@@ -563,78 +827,130 @@
       </section>
 
       <!-- Divider -->
-      <section class="shock-section" style="margin-top: 30px;">
+      <section class="shock-section" style="margin-top: 30px">
         <div class="container">
           <span class="zzz scheme-1 gray-75"></span>
         </div>
       </section>
 
-  
-
-
-      <section class="shock-section has-overlay pt-5 pb-5 bg-image bg-fixed" data-bg-image="assets/images/jpg/a-37.jpg" style="margin-top: 50px;">
+      <section
+        class="shock-section has-overlay pt-5 pb-5 bg-image bg-fixed"
+        data-bg-image="assets/images/jpg/a-37.jpg"
+        style="margin-top: 50px"
+      >
         <div class="container max-w-85">
           <div class="row">
-
             <div class="col-12 col-md-4 align-h-center align-v-center">
-
-            <div class="gallery stretched has-gap scrolling-grid" style="margin-bottom: 0px !important ;">
-              <div class="bricklayer" data-columns="1">
-           
-                <!-- Video -->
-                <a href="https://vimeo.com/222990241" class="item active lightbox-link" style="max-width: 300px;">
-                  <i class="fa-solid fa-circle-play gallery-icon white floating-item"></i>
-                  <div class="image-wrapper small-shadow rounded hover-zoom-rotate">
-                    <img src="assets/images/jpg/e-3.jpg" class="image" alt="This is an example description for this item." />
-                    <div class="overlay secondary-25"></div>
-                  </div>
-                </a>
+              <div
+                class="gallery stretched has-gap scrolling-grid"
+                style="margin-bottom: 0px !important"
+              >
+                <div class="bricklayer" data-columns="1">
+                  <!-- Video -->
+                  <a
+                    href="https://vimeo.com/222990241"
+                    class="item active lightbox-link"
+                    style="max-width: 300px"
+                  >
+                    <i
+                      class="fa-solid fa-circle-play gallery-icon white floating-item"
+                    ></i>
+                    <div
+                      class="image-wrapper small-shadow rounded hover-zoom-rotate"
+                    >
+                      <img
+                        src="assets/images/jpg/e-3.jpg"
+                        class="image"
+                        alt="This is an example description for this item."
+                      />
+                      <div class="overlay secondary-25"></div>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
 
-            </div>
-
-
-
-
-            <div class="col-12 col-md-4 align-h-center align-v-center">       
+            <div class="col-12 col-md-4 align-h-center align-v-center">
               <!-- Intro -->
               <div class="side-intro">
                 <h2 class="title white">
                   <span class="text-1 text-style-5">Subscribe now</span>
-                  <span class="text-2 text-style-6 text-italic">to our <mark class="animated-underline primary">newsletter</mark> !</span>
+                  <span class="text-2 text-style-6 text-italic"
+                    >to our
+                    <mark class="animated-underline primary">newsletter</mark>
+                    !</span
+                  >
                 </h2>
                 <div class="description gray">
-                  <p>Subscribe to our newsletter and follow our content closely.<br>Receive news based on what has to do with you.</p>
+                  <p>
+                    Subscribe to our newsletter and follow our content
+                    closely.<br />Receive news based on what has to do with you.
+                  </p>
                 </div>
               </div>
             </div>
-            <div class="col-12 col-md-4 align-h-center align-v-center"> 
+            <div class="col-12 col-md-4 align-h-center align-v-center">
               <!-- Form -->
               <div class="form-area scheme-2 primary">
-                <form class="form-fields needs-validation" novalidate="novalidate">
+                <form
+                  class="form-fields needs-validation"
+                  novalidate="novalidate"
+                >
                   <div class="form-row row">
                     <div class="form-col form-floating col-12 col-md-6">
-                      <input id="InputFloatingName" class="form-control" type="text" placeholder="Name" required="required">
-                      <label for="InputFloatingName" class="form-label">Name</label>
-                      <div class="invalid-feedback">Please enter your name.</div>
+                      <input
+                        id="InputFloatingName"
+                        class="form-control"
+                        type="text"
+                        placeholder="Name"
+                        required="required"
+                      />
+                      <label for="InputFloatingName" class="form-label"
+                        >Name</label
+                      >
+                      <div class="invalid-feedback">
+                        Please enter your name.
+                      </div>
                       <div class="valid-feedback">Looks good.</div>
                     </div>
                     <div class="form-col form-floating col-12 col-md-6">
-                      <input id="InputFloatingEmail" class="form-control" type="email" placeholder="name@example.com" required="required">
-                      <label for="InputFloatingEmail" class="form-label">Email</label>
-                      <div class="invalid-feedback">Please enter a valid email address.</div>
+                      <input
+                        id="InputFloatingEmail"
+                        class="form-control"
+                        type="email"
+                        placeholder="name@example.com"
+                        required="required"
+                      />
+                      <label for="InputFloatingEmail" class="form-label"
+                        >Email</label
+                      >
+                      <div class="invalid-feedback">
+                        Please enter a valid email address.
+                      </div>
                       <div class="valid-feedback">Looks good.</div>
                     </div>
                   </div>
                   <div class="form-row row">
                     <div class="form-col col-12">
                       <div class="form-check">
-                        <input id="InputCheckbox" class="form-check-input" type="checkbox" required="required">
-                        <label class="form-label form-check-label" for="InputCheckbox">
-                          I agree to the <a href="#your-link" class="link white primary-hover"><u>terms of use</u>.</a>
+                        <input
+                          id="InputCheckbox"
+                          class="form-check-input"
+                          type="checkbox"
+                          required="required"
+                        />
+                        <label
+                          class="form-label form-check-label"
+                          for="InputCheckbox"
+                        >
+                          I agree to the
+                          <a href="#your-link" class="link white primary-hover"
+                            ><u>terms of use</u>.</a
+                          >
                         </label>
-                        <div class="invalid-feedback">Please accept the terms to continue.</div>
+                        <div class="invalid-feedback">
+                          Please accept the terms to continue.
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -660,103 +976,158 @@
         <div class="overlay black-50"></div>
       </section>
 
-
-
       <!-- clients -->
 
-      <section class="shock-section pb-5 bg-color white" style="padding-top: 10vh;">
+      <section
+        class="shock-section pb-5 bg-color white"
+        style="padding-top: 10vh"
+      >
         <div class="container">
           <!-- Carousel -->
 
-          <h2 class="title white" style="text-align: center;">
+          <h2 class="title white" style="text-align: center">
             <span class="text-1 text-style-5">Our</span>
-            <span class="text-2 text-style-6 text-italic"><mark class="animated-underline primary">Clients</mark> </span>
+            <span class="text-2 text-style-6 text-italic"
+              ><mark class="animated-underline primary">Clients</mark>
+            </span>
           </h2>
 
-
-          <div class="swiper slider gapped has-gap has-navigation scheme-2 primary" data-columns="8,6,3,2" data-autoplay="2000" data-loop="true">
+          <div
+            class="swiper slider gapped has-gap has-navigation scheme-2 primary"
+            data-columns="8,6,3,2"
+            data-autoplay="2000"
+            data-loop="true"
+          >
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <a href="assets/images/png/a-1.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-1.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-1.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-2.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-2.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-2.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-3.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-3.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-3.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-4.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-4.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-4.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
-              </div>      
+              </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-5.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-5.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-5.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-6.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-6.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-6.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-7.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-7.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-7.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-8.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-8.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-8.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
-              </div>      
+              </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-9.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-9.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-9.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-1.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-1.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-1.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-2.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-2.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-2.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
               <div class="swiper-slide">
                 <a href="assets/images/png/a-3.png" class="parent">
                   <div class="image-wrapper hover-opacity">
-                    <img src="assets/images/png/a-3.png" class="image invert-color hover-up-down" alt="This is an example description for this item." />
+                    <img
+                      src="assets/images/png/a-3.png"
+                      class="image invert-color hover-up-down"
+                      alt="This is an example description for this item."
+                    />
                   </div>
                 </a>
               </div>
@@ -766,27 +1137,25 @@
           </div>
         </div>
       </section>
-
-
     </main>
 
-        <!-- Vertical Lines -->
+    <!-- Vertical Lines -->
 
-        <div class="vertical-lines diagonal scheme-1 primary">
-          <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 align-h-center">
-              <span class="line"></span>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 align-h-center">
-              <span class="line"></span>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 align-h-center">
-              <span class="line"></span>
-            </div>
-          </div>
+    <div class="vertical-lines diagonal scheme-1 primary">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 align-h-center">
+          <span class="line"></span>
         </div>
+        <div class="col-12 col-md-6 col-lg-4 align-h-center">
+          <span class="line"></span>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 align-h-center">
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
 
-        <!-- <div class="vertical-lines diagonal scheme-2 tertiary">
+    <!-- <div class="vertical-lines diagonal scheme-2 tertiary">
           <div class="row">
             <div class="col-12 col-md-6 align-h-center">
               <span class="line"></span>
@@ -797,15 +1166,21 @@
           </div>
         </div> -->
 
-
-
     <!-- Side Widget -->
-    <div class="side-widget to-left invert-color mix-blend-difference d-only-desktop">
+    <div
+      class="side-widget to-left invert-color mix-blend-difference d-only-desktop"
+    >
       <div class="item">
         <span class="widget label-icons">
-          <a href="#your-link" class="link black black-hover"><i class="icon fab fa-facebook-f"></i></a>
-          <a href="#your-link" class="link black black-hover"><i class="icon fab fa-twitter"></i></a>
-          <a href="#your-link" class="link black black-hover"><i class="icon fab fa-linkedin-in"></i></a>
+          <a href="#your-link" class="link black black-hover"
+            ><i class="icon fab fa-facebook-f"></i
+          ></a>
+          <a href="#your-link" class="link black black-hover"
+            ><i class="icon fab fa-twitter"></i
+          ></a>
+          <a href="#your-link" class="link black black-hover"
+            ><i class="icon fab fa-linkedin-in"></i
+          ></a>
           <span class="label-line black"></span>
         </span>
       </div>
@@ -823,58 +1198,112 @@
     </div>
 
     <!-- Modal -->
-  <div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">
+    <div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">
       <div class="modal-dialog max-w-50">
         <div class="modal-content shadow">
           <div class="modal-header">
-            <i class="fa-solid fa-xmark close-button black primary-hover" data-bs-dismiss="modal" aria-label="Close"></i>
+            <i
+              class="fa-solid fa-xmark close-button black primary-hover"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></i>
             <!-- Intro -->
             <div class="basic-intro">
               <h2 class="title black">
                 <span class="text-1 text-style-7">How can </span>
-                <span class="text-2 text-style-8 text-italic">we <mark class="animated-underline accent">help you</mark>?</span>
+                <span class="text-2 text-style-8 text-italic"
+                  >we
+                  <mark class="animated-underline accent">help you</mark>?</span
+                >
               </h2>
               <div class="description gray">
-                <p>Please fill in the form </p>
+                <p>Please fill in the form</p>
               </div>
             </div>
           </div>
           <div class="modal-body">
             <!-- Form -->
             <div class="form-area scheme-1 primary">
-              <form class="form-fields needs-validation" novalidate="novalidate">
+              <form
+                class="form-fields needs-validation"
+                novalidate="novalidate"
+              >
                 <div class="form-row row">
                   <div class="form-col form-floating col-12 col-md-6">
-                    <input id="InputModalName" class="form-control" type="text" placeholder="Name" required="required">
+                    <input
+                      id="InputModalName"
+                      class="form-control"
+                      type="text"
+                      placeholder="Name"
+                      required="required"
+                    />
                     <label for="InputModalName" class="form-label">Name</label>
                     <div class="invalid-feedback">Please enter your name.</div>
                     <div class="valid-feedback">Looks good.</div>
                   </div>
                   <div class="form-col form-floating col-12 col-md-6">
-                    <input id="InputModalEmail" class="form-control" type="email" placeholder="name@example.com" required="required">
-                    <label for="InputModalEmail" class="form-label">Email</label>
-                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                    <input
+                      id="InputModalEmail"
+                      class="form-control"
+                      type="email"
+                      placeholder="name@example.com"
+                      required="required"
+                    />
+                    <label for="InputModalEmail" class="form-label"
+                      >Email</label
+                    >
+                    <div class="invalid-feedback">
+                      Please enter a valid email address.
+                    </div>
                     <div class="valid-feedback">Looks good.</div>
                   </div>
                 </div>
                 <div class="form-row row">
                   <div class="form-col form-floating col-12">
-                    <textarea id="InputModalMessage" class="form-control form-textarea" rows="3" placeholder="Enter your message (optional)."></textarea>
-                    <label for="InputModalMessage" class="form-label">Message</label>
-                    <div class="valid-feedback">It's optional, but we'd like to know about it :)</div>
+                    <textarea
+                      id="InputModalMessage"
+                      class="form-control form-textarea"
+                      rows="3"
+                      placeholder="Enter your message (optional)."
+                    ></textarea>
+                    <label for="InputModalMessage" class="form-label"
+                      >Message</label
+                    >
+                    <div class="valid-feedback">
+                      It's optional, but we'd like to know about it :)
+                    </div>
                   </div>
                 </div>
                 <div class="form-row row">
                   <div class="form-col col-12 col-md-8">
                     <div class="form-check">
-                      <input id="InputRadioChecked" class="form-check-input form-radio" type="radio" name="InputRadio" checked="checked" required="required">
-                      <label class="form-label form-check-label" for="InputRadioChecked">
+                      <input
+                        id="InputRadioChecked"
+                        class="form-check-input form-radio"
+                        type="radio"
+                        name="InputRadio"
+                        checked="checked"
+                        required="required"
+                      />
+                      <label
+                        class="form-label form-check-label"
+                        for="InputRadioChecked"
+                      >
                         I found this site by searching the internet.
                       </label>
                     </div>
                     <div class="form-check">
-                      <input id="InputRadio" class="form-check-input form-radio" type="radio" name="InputRadio" required="required">
-                      <label class="form-label form-check-label" for="InputRadio">
+                      <input
+                        id="InputRadio"
+                        class="form-check-input form-radio"
+                        type="radio"
+                        name="InputRadio"
+                        required="required"
+                      />
+                      <label
+                        class="form-label form-check-label"
+                        for="InputRadio"
+                      >
                         A friend recommended this site to me.
                       </label>
                     </div>
@@ -894,12 +1323,10 @@
               </form>
             </div>
           </div>
-            <!-- Form -->
- 
-          </div>
+          <!-- Form -->
         </div>
       </div>
-    
+    </div>
 
     <!-- Footer -->
     <footer id="footer" class="shock-footer scheme-1 primary">
@@ -911,12 +1338,18 @@
                 <!-- Brand -->
                 <a href="/" class="footer-brand floating-item">
                   <!-- <div class="site-title">Site Title</div> -->
-                  <img src="assets/images/s-logo.gif" alt="Shock Theme" class="logo" />
-                  
+                  <img
+                    src="assets/images/s-logo.gif"
+                    alt="Shock Theme"
+                    class="logo"
+                  />
                 </a>
                 <!-- Text -->
                 <div class="footer-text">
-                  <p>Shock is a creative multipurpose theme for building websites powered by Bootstrap 5 and other libraries.</p>
+                  <p>
+                    Shock is a creative multipurpose theme for building websites
+                    powered by Bootstrap 5 and other libraries.
+                  </p>
                 </div>
               </div>
               <div class="footer-item">
@@ -925,16 +1358,28 @@
                 <ul class="nav-list list-unstyled">
                   <li class="nav-item">
                     <a href="tel:+19912345678" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/call-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                      <img
+                        class="image-icon"
+                        src="assets/svg/call-sharp.svg"
+                        alt="Icon name"
+                        data-shock-icon="32"
+                      />
                       <span class="text">+1 (99) 1234 5678</span>
                       <span class="badge flex ms-1 primary primary-hover">
-                        <span class="badge-text white white-hover">Mon-Fri</span>
+                        <span class="badge-text white white-hover"
+                          >Mon-Fri</span
+                        >
                       </span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="mailto:contact@mail.com" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/mail-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                      <img
+                        class="image-icon"
+                        src="assets/svg/mail-sharp.svg"
+                        alt="Icon name"
+                        data-shock-icon="32"
+                      />
                       <span class="text">contact@mail.com</span>
                     </a>
                   </li>
@@ -948,13 +1393,23 @@
                 <ul class="nav-list list-unstyled">
                   <li class="nav-item">
                     <a href="#your-link" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                      <img
+                        class="image-icon"
+                        src="assets/svg/chevron-forward-sharp.svg"
+                        alt="Icon name"
+                        data-shock-icon="32"
+                      />
                       <span class="text">Who We Are</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#your-link" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                      <img
+                        class="image-icon"
+                        src="assets/svg/chevron-forward-sharp.svg"
+                        alt="Icon name"
+                        data-shock-icon="32"
+                      />
                       <span class="text">Social Projects</span>
                       <span class="badge flex ms-1 primary primary-hover">
                         <span class="badge-text white white-hover">New</span>
@@ -963,13 +1418,23 @@
                   </li>
                   <li class="nav-item">
                     <a href="#your-link" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                      <img
+                        class="image-icon"
+                        src="assets/svg/chevron-forward-sharp.svg"
+                        alt="Icon name"
+                        data-shock-icon="32"
+                      />
                       <span class="text">Our Services</span>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="#your-link" class="nav-link has-icon">
-                      <img class="image-icon" src="assets/svg/chevron-forward-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                      <img
+                        class="image-icon"
+                        src="assets/svg/chevron-forward-sharp.svg"
+                        alt="Icon name"
+                        data-shock-icon="32"
+                      />
                       <span class="text">Privacy Police</span>
                     </a>
                   </li>
@@ -979,8 +1444,12 @@
                 <!-- Button -->
                 <a href="#your-link" class="button outline gray primary-hover">
                   <span class="hover-rotate">
-                    <span class="button-text white white-hover">Get in Touch</span>
-                    <i class="fa-solid fa-arrow-right button-icon white white-hover"></i>
+                    <span class="button-text white white-hover"
+                      >Get in Touch</span
+                    >
+                    <i
+                      class="fa-solid fa-arrow-right button-icon white white-hover"
+                    ></i>
                   </span>
                 </a>
               </div>
@@ -992,42 +1461,50 @@
                 <div class="tag-cloud">
                   <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
-                      <span class="badge-text gray white-hover">Environment</span>
+                      <span class="badge-text gray white-hover"
+                        >Environment</span
+                      >
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
-                    <span class="badge outline gray-50 primary-hover floating-item-smooth">
+                  <a href="#your-link" class="link">
+                    <span
+                      class="badge outline gray-50 primary-hover floating-item-smooth"
+                    >
                       <span class="badge-text gray white-hover">Events</span>
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
+                  <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
-                      <span class="badge-text gray white-hover">Technology</span>
+                      <span class="badge-text gray white-hover"
+                        >Technology</span
+                      >
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
+                  <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
                       <span class="badge-text gray white-hover">Web</span>
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
+                  <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
                       <span class="badge-text gray white-hover">Mobile</span>
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
+                  <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
                       <span class="badge-text gray white-hover">Design</span>
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
+                  <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
                       <span class="badge-text gray white-hover">Branding</span>
                     </span>
                   </a>
-                  <a href="#your-link" class="link">                      
+                  <a href="#your-link" class="link">
                     <span class="badge outline gray-50 primary-hover">
-                      <span class="badge-text gray white-hover">Development</span>
+                      <span class="badge-text gray white-hover"
+                        >Development</span
+                      >
                     </span>
                   </a>
                 </div>
@@ -1038,13 +1515,25 @@
                 <div class="list-wrapper">
                   <ul class="icon-h-list">
                     <li class="ms-0 item">
-                      <a href="#your-link" class="link gray primary-hover hover-rotate"><i class="icon fab fa-facebook-f"></i></a>
+                      <a
+                        href="#your-link"
+                        class="link gray primary-hover hover-rotate"
+                        ><i class="icon fab fa-facebook-f"></i
+                      ></a>
                     </li>
                     <li class="item">
-                      <a href="#your-link" class="link gray primary-hover hover-rotate"><i class="icon fab fa-twitter"></i></a>
+                      <a
+                        href="#your-link"
+                        class="link gray primary-hover hover-rotate"
+                        ><i class="icon fab fa-twitter"></i
+                      ></a>
                     </li>
                     <li class="item">
-                      <a href="#your-link" class="link gray primary-hover hover-rotate"><i class="icon fab fa-linkedin-in"></i></a>
+                      <a
+                        href="#your-link"
+                        class="link gray primary-hover hover-rotate"
+                        ><i class="icon fab fa-linkedin-in"></i
+                      ></a>
                     </li>
                   </ul>
                 </div>
@@ -1055,7 +1544,11 @@
                 <h6 class="title">Inspirations</h6>
                 <!-- Image -->
                 <a href="#your-link" class="footer-image black">
-                  <img src="assets/images/jpg/b-29.jpg" alt="Image name" class="image shadow">
+                  <img
+                    src="assets/images/jpg/b-29.jpg"
+                    alt="Image name"
+                    class="image shadow"
+                  />
                   <span class="title">View Portfolio</span>
                 </a>
               </div>
@@ -1064,32 +1557,64 @@
         </div>
       </div>
       <div class="bottom-bar">
-        <div class="text">© 2022 - All rights reserved. The <a href="https://codings.dev?redirect=shock-html" class="link gray primary-hover"><u>Shock Theme</u></a> is developed and maintained by <a href="https://codings.dev?ref=shock-html" class="link gray primary-hover"><u>Codings Group</u></a>.</div>
+        <div class="text">
+          © 2022 - All rights reserved. The
+          <a
+            href="https://codings.dev?redirect=shock-html"
+            class="link gray primary-hover"
+            ><u>Shock Theme</u></a
+          >
+          is developed and maintained by
+          <a
+            href="https://codings.dev?ref=shock-html"
+            class="link gray primary-hover"
+            ><u>Codings Group</u></a
+          >.
+        </div>
       </div>
     </footer>
 
-    
     <!-- Cursor -->
-    <svg class="cursor-effect secondary" width="220" height="220" viewBox="0 0 220 220">
+    <svg
+      class="cursor-effect secondary"
+      width="220"
+      height="220"
+      viewBox="0 0 220 220"
+    >
       <defs>
-        <filter id="cursor-effect-filter" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
-          <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp"></feTurbulence>
+        <filter
+          id="cursor-effect-filter"
+          x="-50%"
+          y="-50%"
+          width="200%"
+          height="200%"
+          filterUnits="objectBoundingBox"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0"
+            numOctaves="1"
+            result="warp"
+          ></feTurbulence>
           <feOffset dx="-30" result="warpOffset"></feOffset>
-          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="20" in="SourceGraphic" in2="warpOffset"></feDisplacementMap>
+          <feDisplacementMap
+            xChannelSelector="R"
+            yChannelSelector="G"
+            scale="20"
+            in="SourceGraphic"
+            in2="warpOffset"
+          ></feDisplacementMap>
         </filter>
       </defs>
       <circle class="cursor-effect-inner" cx="110" cy="110" r="20"></circle>
     </svg>
-    
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script type="text/javascript">
       particlesJS.load("particles-js", "./assets/particles.json", function () {
         console.log("callback - particles.js config loaded");
       });
     </script>
-   
-
-
 
     <!-- Vendor JavaScript -->
     <script src="./assets/js/vendor/jquery.min.js"></script>
@@ -1109,16 +1634,12 @@
     <script src="./assets/js/vendor/progressbar.min.js"></script>
     <script src="./assets/js/vendor/map-styles.min.js"></script>
     <script src="./assets/js/vendor/magnetic-effect.min.js"></script>
-    <script src='./assets/js/vendor/gsap.min.js'></script>
+    <script src="./assets/js/vendor/gsap.min.js"></script>
     <script src="./assets/js/vendor/aos.min.js"></script>
     <script src="./assets/js/vendor/lax.min.js"></script>
-    <script src="./assets/js/vendor/cursor-effect.min.js"></script> 
-   
+    <script src="./assets/js/vendor/cursor-effect.min.js"></script>
 
-  <!-- Main JavaScript -->
-  <script src="./assets/js/main.js"></script>
-    
-
-    
+    <!-- Main JavaScript -->
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
