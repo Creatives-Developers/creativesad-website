@@ -743,10 +743,13 @@ jQuery(function ($) {
         },
       });
     });
+    
+  
   });
 
   window.addEventListener("load", () => {
     loadParticals();
+   
   });
   window.addEventListener("resize", resize);
 });
@@ -1678,8 +1681,7 @@ function loadParticals() {
             this.wrapperElement.clientWidth > window.innerWidth
               ? window.innerWidth
               : this.wrapperElement.clientWidth;
-          this.height =
-            this.wrapperElement.clientHeight 
+          this.height = this.wrapperElement.clientHeight;
         }
       }
 
@@ -2135,10 +2137,8 @@ function loadParticals() {
 function resize() {
   for (let elem of nextParticles) {
     const nextParticle = elem.nextParticle;
-
     const parenWidth = nextParticle.wrapperElement.clientWidth,
       parentHeight = nextParticle.wrapperElement.clientHeight;
-   
     nextParticle.width =
       parenWidth > window.innerWidth ? window.innerWidth : parenWidth;
     nextParticle.height = parentHeight;
@@ -2148,3 +2148,8 @@ function resize() {
     nextParticle.start();
   }
 }
+
+
+
+  const prev =  document.querySelector('.slide-navigation-item-prev')
+  prev.click()
