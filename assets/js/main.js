@@ -619,8 +619,7 @@ jQuery(function ($) {
 jQuery(function ($) {
   "use strict";
 
-  window.onload = function () {
-  
+  window.addEventListener("load", () => {
     lax.init();
 
     // Settings
@@ -744,8 +743,12 @@ jQuery(function ($) {
         },
       });
     });
-      loadParticals();
-  };
+  });
+
+  window.addEventListener("load", () => {
+    loadParticals();
+  });
+  window.addEventListener("resize", resize);
 });
 
 // #endregion Lax
@@ -1251,6 +1254,7 @@ jQuery(function ($) {
 // #endregion ZZZ
 
 // particals js
+let nextParticles;
 function loadParticals() {
   (function (exports) {
     "use strict";
@@ -1658,6 +1662,7 @@ function loadParticals() {
 
       _initResponsive(options) {
         this.responsiveWidth = this.wrapperElement && options.responsiveWidth;
+
         if (this.responsiveWidth) {
           this.on("stopped", () => {
             this.width = this.wrapperElement.clientWidth;
@@ -1668,7 +1673,13 @@ function loadParticals() {
               this.stop();
             }
           });
-          this.width = this.wrapperElement.clientWidth;
+
+          this.width =
+            this.wrapperElement.clientWidth > window.innerWidth
+              ? window.innerWidth
+              : this.wrapperElement.clientWidth;
+          this.height =
+            this.wrapperElement.clientHeight 
         }
       }
 
@@ -2101,39 +2112,39 @@ function loadParticals() {
     };
 
     exports.NextParticle = NextParticle;
-    const nextParticles = document.getElementsByClassName("next-particle");
+    nextParticles = document.getElementsByClassName("next-particle");
     for (
       let nextParticleIndex = 0;
       nextParticleIndex < nextParticles.length;
       nextParticleIndex++
     ) {
       const elem = nextParticles[nextParticleIndex];
-      elem.nextParticle = new NextParticle(elem);
+      elem.nextParticle = new NextParticle({
+        image: elem,
+        responsiveWidth: true,
+        width: 600,
+        height: 600,
+        initPosition: "random",
+        initDirection: "none",
+      });
     }
+    resize();
   })(window);
+}
 
-  const nextParticle = new NextParticle({
-    image: document.images,
-    width: window.innerWidth,
-    height: window.innerHeight,
-    maxHeight: 600,
-    maxWidth: 600,
-    initPosition: "random",
-    initDirection: "none",
-    particleGap: 2,
-    noise: 100,
-    gravity: 0.1,
-    // disableInteraction: true
-  });
-  window.onresize = function () {
-    console.log("resize")
-    nextParticle.width = window.innerWidth;
-    nextParticle.height = window.innerHeight;
+function resize() {
+  for (let elem of nextParticles) {
+    const nextParticle = elem.nextParticle;
+
+    const parenWidth = nextParticle.wrapperElement.clientWidth,
+      parentHeight = nextParticle.wrapperElement.clientHeight;
+   
+    nextParticle.width =
+      parenWidth > window.innerWidth ? window.innerWidth : parenWidth;
+    nextParticle.height = parentHeight;
+    nextParticle.minWidth =
+      parenWidth > window.innerWidth ? window.innerWidth : parenWidth;
+    nextParticle.minHeight = parentHeight;
     nextParticle.start();
-  };
-  setTimeout(function () {
-    const nextCanvas = document.querySelectorAll("canvas")[1];
-    nextCanvas.classList.add("working");
-    console.log(nextCanvas);
-  }, 2000);
+  }
 }
