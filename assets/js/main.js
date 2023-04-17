@@ -753,9 +753,7 @@ jQuery(function ($) {
       nextParticleIndex < nextParticles.length;
       nextParticleIndex++
     ) {
-      
       const elem = nextParticles[nextParticleIndex];
-      console.log(elem)
       elem.nextParticle = new NextParticle({
         image: elem,
         responsiveWidth: true,
@@ -2153,5 +2151,5 @@ const next = document.querySelector(".slide-navigation-item-next");
 const prev = document.querySelector(".slide-navigation-item-prev");
 next.click();
 
-next.addEventListener('click',resize)
-prev.addEventListener('click',resize)
+next.addEventListener("click", resize);
+prev.addEventListener("click", resize);
