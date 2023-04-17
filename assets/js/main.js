@@ -2127,7 +2127,8 @@ function loadParticals() {
         width: 600,
         height: 600,
         initPosition: "random",
-        initDirection: "none",
+        particleGap:2
+        
       });
     }
     resize();
