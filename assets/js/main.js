@@ -743,13 +743,30 @@ jQuery(function ($) {
         },
       });
     });
-    
-  
   });
 
   window.addEventListener("load", () => {
     loadParticals();
-   
+    nextParticles = document.getElementsByClassName("next-particle");
+    for (
+      let nextParticleIndex = 0;
+      nextParticleIndex < nextParticles.length;
+      nextParticleIndex++
+    ) {
+      
+      const elem = nextParticles[nextParticleIndex];
+      console.log(elem)
+      elem.nextParticle = new NextParticle({
+        image: elem,
+        responsiveWidth: true,
+        width: 600,
+        height: 600,
+        initPosition: "random",
+        initDirection: "none",
+        particleGap: 2,
+      });
+    }
+    resize();
   });
   window.addEventListener("resize", resize);
 });
@@ -2114,23 +2131,6 @@ function loadParticals() {
     };
 
     exports.NextParticle = NextParticle;
-    nextParticles = document.getElementsByClassName("next-particle");
-    for (
-      let nextParticleIndex = 0;
-      nextParticleIndex < nextParticles.length;
-      nextParticleIndex++
-    ) {
-      const elem = nextParticles[nextParticleIndex];
-      elem.nextParticle = new NextParticle({
-        image: elem,
-        responsiveWidth: true,
-        width: 600,
-        height: 600,
-        initPosition: "random",
-        initDirection: "none",
-      });
-    }
-    resize();
   })(window);
 }
 
@@ -2149,7 +2149,9 @@ function resize() {
   }
 }
 
+const next = document.querySelector(".slide-navigation-item-next");
+const prev = document.querySelector(".slide-navigation-item-prev");
+next.click();
 
-
-  const prev =  document.querySelector('.slide-navigation-item-prev')
-  prev.click()
+next.addEventListener('click',resize)
+prev.addEventListener('click',resize)
