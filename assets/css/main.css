@@ -3853,6 +3853,7 @@ table {
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 1000000;
 }
 
 .modal .modal-header .close-button:hover {
