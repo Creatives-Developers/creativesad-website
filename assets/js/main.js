@@ -744,28 +744,8 @@ jQuery(function ($) {
       });
     });
   });
-
-  window.addEventListener("load", () => {
-    loadParticals();
-    nextParticles = document.getElementsByClassName("next-particle");
-    for (
-      let nextParticleIndex = 0;
-      nextParticleIndex < nextParticles.length;
-      nextParticleIndex++
-    ) {
-      const elem = nextParticles[nextParticleIndex];
-      elem.nextParticle = new NextParticle({
-        image: elem,
-        responsiveWidth: true,
-        width: 600,
-        height: 600,
-        initPosition: "random",
-        initDirection: "none",
-        particleGap: 2,
-      });
-    }
-    resize();
-  });
+  loadParticals();
+  window.addEventListener("load",resize);
   window.addEventListener("resize", resize);
 });
 
@@ -1273,7 +1253,7 @@ jQuery(function ($) {
 
 // particals js
 let nextParticles;
-function loadParticals() {
+async function loadParticals() {
   (function (exports) {
     "use strict";
 
@@ -1688,6 +1668,7 @@ function loadParticals() {
           });
           this.wrapperElement.addEventListener("resize", () => {
             if (this.width !== this.wrapperElement.clientWidth) {
+              console.log("X".repeat(50));
               this.stop();
             }
           });
@@ -2129,6 +2110,24 @@ function loadParticals() {
     };
 
     exports.NextParticle = NextParticle;
+    nextParticles = document.getElementsByClassName("next-particle");
+    for (
+      let nextParticleIndex = 0;
+      nextParticleIndex < nextParticles.length;
+      nextParticleIndex++
+    ) {
+      const elem = nextParticles[nextParticleIndex];
+      elem.nextParticle = new NextParticle({
+        image: elem,
+        responsiveWidth: true,
+        width: 600,
+        height: 600,
+        initPosition: "random",
+        initDirection: "none",
+        particleGap: 2,
+      });
+    }
+    resize();
   })(window);
 }
 
@@ -2148,8 +2147,4 @@ function resize() {
 }
 
 const next = document.querySelector(".slide-navigation-item-next");
-const prev = document.querySelector(".slide-navigation-item-prev");
 next.click();
-
-next.addEventListener("click", resize);
-prev.addEventListener("click", resize);
