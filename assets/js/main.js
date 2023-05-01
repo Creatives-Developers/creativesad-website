@@ -45,23 +45,27 @@ Support : codings.dev
 jQuery(function ($) {
   "use strict";
 
-  var images = $("img");
-  var preloader = $("#preloader");
-  var delay = preloader.data("delay");
+  // close after Video End
+  // document.getElementById("preload-video").addEventListener(
+  //   "ended",
+  //   () => {
+  //     var preloader = $("#preloader");
+  //     preloader.addClass("loaded");
+  //     document.body.style.overflow = "auto";
+  //     const next = document.querySelector(".slide-navigation-item-next");
+  //     next.click();
+  //   },
+  //   false
+  // );
 
-  imagesLoaded(images, function () {
-    if (!delay) {
-      delay = 0;
-    }
-
-    setTimeout(function () {
-      preloader.addClass("loaded");
-    }, delay);
-  });
-
+  // close after one Second
   setTimeout(function () {
+    var preloader = $("#preloader");
     preloader.addClass("loaded");
-  }, 10000);
+    document.body.style.overflow = "auto";
+    const next = document.querySelector(".slide-navigation-item-next");
+    next.click();
+  }, 1000);
 });
 
 // #endregion Preloader
@@ -745,7 +749,7 @@ jQuery(function ($) {
     });
   });
   loadParticals();
-  window.addEventListener("load",resize);
+  window.addEventListener("load", resize);
   window.addEventListener("resize", resize);
 });
 
@@ -2145,6 +2149,3 @@ function resize() {
     nextParticle.start();
   }
 }
-
-const next = document.querySelector(".slide-navigation-item-next");
-next.click();
