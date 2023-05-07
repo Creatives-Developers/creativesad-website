@@ -41,6 +41,12 @@ Support : codings.dev
 ----------------------------------------------*/
 
 // #region Preloader
+updateTime();
+function updateTime() {
+  const span = document.querySelector("#dynamic-time");
+  span.innerText = `${new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`;
+  $("#preloader p").addClass("visible");
+}
 
 jQuery(function ($) {
   "use strict";
@@ -49,7 +55,7 @@ jQuery(function ($) {
   // document.getElementById("preload-video").addEventListener(
   //   "ended",
   //   () => {
-  //     var preloader = $("#preloader");
+  // var preloader = $("#preloader");
   //     preloader.addClass("loaded");
   //     document.body.style.overflow = "auto";
   //     const next = document.querySelector(".slide-navigation-item-next");
@@ -65,7 +71,7 @@ jQuery(function ($) {
     document.body.style.overflow = "auto";
     const next = document.querySelector(".slide-navigation-item-next");
     next.click();
-  }, 1000);
+  }, 2000);
 });
 
 // #endregion Preloader

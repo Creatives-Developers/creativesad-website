@@ -5048,3 +5048,23 @@ table {
   z-index: 999999;
   width: 100%;
 }
+
+.video-container p {
+  position: fixed;
+  z-index: 9999999;
+  color: white;
+
+  inset: 55% 40%;
+  font-size: 35px;
+  font-weight: bold;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.video-container p.visible {
+  opacity: 1;
+}
+
+.video-container p span {
+  color: rgb(0 185 94);
+}
