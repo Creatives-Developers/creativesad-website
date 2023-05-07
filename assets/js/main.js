@@ -71,7 +71,7 @@ jQuery(function ($) {
     document.body.style.overflow = "auto";
     const next = document.querySelector(".slide-navigation-item-next");
     next.click();
-  }, 2000);
+  }, 3000);
 });
 
 // #endregion Preloader
