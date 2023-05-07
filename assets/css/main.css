@@ -5068,3 +5068,26 @@ table {
 .video-container p span {
   color: rgb(0 185 94);
 }
+
+/* #endregion Video Preload  region*/
+
+/* Start Service Customizing  */
+.service-carousel-item {
+  padding: 30px 10vw;
+}
+
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: 10%;
+  opacity: 1;
+}
+.carousel-control-next span,
+.carousel-control-prev span {
+  background-color: #005889;
+  width: 45px;
+  height: 45px;
+  background-size: 75%;
+}
+
+/* End Service Customizing  */
