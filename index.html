@@ -77,7 +77,7 @@
   <body class="shock-body">
     <!-- Preloader -->
     <div id="preloader" class="video-container preloader black">
-      <p>It's <span id="dynamic-time">12:54</span></p>
+      <p>It's <span id="dynamic-time">00:00</span></p>
       <video id="preload-video" autoplay muted>
         <source src="assets/videos/intro.mp4" type="video/mp4" />
       </video>
@@ -1479,6 +1479,7 @@
               <form
                 class="form-fields needs-validation"
                 novalidate="novalidate"
+                id="help-form"
               >
                 <div class="form-row row">
                   <div class="form-col form-floating col-12 col-md-6">
@@ -1488,6 +1489,7 @@
                       type="text"
                       placeholder="Name"
                       required="required"
+                      autocomplete="off"
                     />
                     <label for="InputModalName" class="form-label">Name</label>
                     <div class="invalid-feedback">Please enter your name.</div>
@@ -1500,6 +1502,7 @@
                       type="email"
                       placeholder="name@example.com"
                       required="required"
+                      autocomplete="off"
                     />
                     <label for="InputModalEmail" class="form-label"
                       >Email</label
@@ -1517,6 +1520,7 @@
                       class="form-control form-textarea"
                       rows="3"
                       placeholder="Enter your message (optional)."
+                      
                     ></textarea>
                     <label for="InputModalMessage" class="form-label"
                       >Message</label
@@ -1536,6 +1540,7 @@
                         name="InputRadio"
                         checked="checked"
                         required="required"
+                        value="I found this site by searching the internet."
                       />
                       <label
                         class="form-label form-check-label"
@@ -1551,6 +1556,7 @@
                         type="radio"
                         name="InputRadio"
                         required="required"
+                        value="A friend recommended this site to me."
                       />
                       <label
                         class="form-label form-check-label"

@@ -2160,6 +2160,21 @@ function resize() {
   }
 }
 
+const showSuccessAlert = (title) => {
+  swal({
+    title,
+    icon: "success",
+  });
+};
+
+const showErrorAlert = (title, text) => {
+  swal({
+    title,
+    text,
+    icon: "error",
+  });
+};
+
 /* Start Subscription Form Submition */
 const baseUrl = `http://site-server.creativesad.com`;
 const sendMailLink = `${baseUrl}/mails/sendMail`;
@@ -2173,7 +2188,7 @@ const nameInput = document.getElementById("InputFloatingName");
 const emailInput = document.getElementById("InputFloatingEmail");
 const agreeWithTerms = document.getElementById("InputCheckbox");
 
-const resetForm = () => {
+const resetSubscriptionForm = () => {
   subscriptionForm.reset();
   document
     .querySelectorAll("#subscribtion-form .invalid-feedback")
@@ -2184,41 +2199,75 @@ const resetForm = () => {
 };
 
 subscriptionForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
   const name = nameInput.value;
   const email = emailInput.value;
-  event.preventDefault();
   if (name && email && isValidEmail(email) && agreeWithTerms.checked) {
-   try {
-    const result = await fetch(sendMailLink, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        subject: "Subscription",
-        mailBody: { name, email },
-      }),
-    });
-    if (result.status === 200) {
-      resetForm();
-      swal({
-        title: "Send Successfully",
-        icon: "success",
+    try {
+      const result = await fetch(sendMailLink, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          subject: "Subscription",
+          mailBody: { name, email },
+        }),
       });
-    } else {
-      swal({
-        title: "Failed To Send",
-        text: "Check Your Network",
-        icon: "error",
-      });
+      if (result.status === 200) {
+        resetSubscriptionForm();
+        showSuccessAlert("Send Successfully");
+      } else {
+        showErrorAlert("Failed To Send", "Check Your Network");
+      }
+    } catch (error) {
+      showErrorAlert("Failed To Send", "Check Your Network");
     }
-   } catch (error) {
-    swal({
-      title: "Failed To Send",
-      text: "Check Your Network",
-      icon: "error",
-    });
-   }
   }
 });
 /* End Subscription Form Submition */
+/* Start Help Form Submition */
+const helpForm = document.getElementById("help-form");
+const helpNameInput = document.getElementById("InputModalName");
+const helpEmailInput = document.getElementById("InputModalEmail");
+const helpMessageInput = document.getElementById("InputModalMessage");
+const resethelpForm = () => {
+  helpForm.reset();
+  document.querySelectorAll("#help-form .invalid-feedback").forEach((el) => {
+    el.style.display = "none";
+  });
+  helpForm.classList.remove("was-validated");
+};
+
+helpForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+  const name = helpNameInput.value;
+  const email = helpEmailInput.value;
+  const message = helpMessageInput.value;
+  const comeFrom = document.querySelector("[name='InputRadio']:checked").value;
+  if (name && email && isValidEmail(email) && message) {
+    try {
+      const result = await fetch(sendMailLink, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          subject: "Help",
+          mailBody: { name, email, message, comeFrom },
+        }),
+      });
+      if (result.status === 200) {
+        resethelpForm();
+        $("#modal").modal("hide");
+        showSuccessAlert("Send Successfully");
+      } else {
+        showErrorAlert("Failed To Send", "Check Your Network");
+      }
+    } catch (error) {
+      showErrorAlert("Failed To Send", "Check Your Network");
+    }
+  }
+});
+
+/* End Help Form Submition */
