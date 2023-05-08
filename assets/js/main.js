@@ -2176,7 +2176,7 @@ const showErrorAlert = (title, text) => {
 };
 
 /* Start Subscription Form Submition */
-const baseUrl = `http://site-server.creativesad.com`;
+const baseUrl = `https://site-server.creativesad.com`;
 const sendMailLink = `${baseUrl}/mails/sendMail`;
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
