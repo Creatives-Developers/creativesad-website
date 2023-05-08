@@ -44,7 +44,11 @@ Support : codings.dev
 updateTime();
 function updateTime() {
   const span = document.querySelector("#dynamic-time");
-  span.innerText = `${new Date().toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true })}`;
+  span.innerText = `${new Date().toLocaleString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  })}`;
   $("#preloader p").addClass("visible");
 }
 
@@ -2155,3 +2159,58 @@ function resize() {
     nextParticle.start();
   }
 }
+
+/* Start Subscription Form Submition */
+const baseUrl = `http://localhost:3000`;
+const sendMailLink = `${baseUrl}/mails/sendMail`;
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+const subscriptionForm = document.getElementById("subscribtion-form");
+const nameInput = document.getElementById("InputFloatingName");
+const emailInput = document.getElementById("InputFloatingEmail");
+const agreeWithTerms = document.getElementById("InputCheckbox");
+
+const resetForm = () => {
+  subscriptionForm.reset();
+  document
+    .querySelectorAll("#subscribtion-form .invalid-feedback")
+    .forEach((el) => {
+      el.style.display = "none";
+    });
+  subscriptionForm.classList.remove("was-validated");
+};
+
+subscriptionForm.addEventListener("submit", async (event) => {
+  const name = nameInput.value;
+  const email = emailInput.value;
+  event.preventDefault();
+  if (name && email && isValidEmail(email) && agreeWithTerms.checked) {
+    const result = await fetch(sendMailLink, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        subject: "Subscription",
+        mailBody: { name, email },
+      }),
+    });
+    if (result.status === 200) {
+      resetForm();
+      swal({
+        title: "Send Successfully",
+        icon: "success",
+      });
+    } else {
+      swal({
+        title: "Failed To Send",
+        text: "Check Your Network",
+        icon: "error",
+      });
+    }
+  }
+});
+/* End Subscription Form Submition */
