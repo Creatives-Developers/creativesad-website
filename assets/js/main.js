@@ -2161,7 +2161,7 @@ function resize() {
 }
 
 /* Start Subscription Form Submition */
-const baseUrl = `http://localhost:3000`;
+const baseUrl = `http://site-server.creativesad.com`;
 const sendMailLink = `${baseUrl}/mails/sendMail`;
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -2188,6 +2188,7 @@ subscriptionForm.addEventListener("submit", async (event) => {
   const email = emailInput.value;
   event.preventDefault();
   if (name && email && isValidEmail(email) && agreeWithTerms.checked) {
+   try {
     const result = await fetch(sendMailLink, {
       method: "POST",
       headers: {
@@ -2211,6 +2212,13 @@ subscriptionForm.addEventListener("submit", async (event) => {
         icon: "error",
       });
     }
+   } catch (error) {
+    swal({
+      title: "Failed To Send",
+      text: "Check Your Network",
+      icon: "error",
+    });
+   }
   }
 });
 /* End Subscription Form Submition */
