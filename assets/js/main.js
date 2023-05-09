@@ -44,12 +44,15 @@ Support : codings.dev
 updateTime();
 function updateTime() {
   const span = document.querySelector("#dynamic-time");
-  span.innerText = `${new Date().toLocaleString("en-US", {
-    hour: "numeric",
-    minute: "numeric",
-    hour12: true,
-  })}`;
-  $("#preloader p").addClass("visible");
+  if(span){
+    span.innerText = `${new Date().toLocaleString("en-US", {
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    })}`;
+    $("#preloader p").addClass("visible");
+  }
+ 
 }
 
 jQuery(function ($) {

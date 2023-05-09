@@ -35,7 +35,12 @@
   <body class="shock-body">
 
     <!-- Preloader -->
-    <div id="preloader" class="preloader black" data-bg-image="assets/images/logo-white.svg"></div>
+    <div id="preloader" class="video-container preloader black">
+      <p>It's <span id="dynamic-time">00:00</span></p>
+      <video id="preload-video" autoplay muted>
+        <source src="assets/videos/intro.mp4" type="video/mp4" />
+      </video>
+    </div>
 
     <!-- Popup Bar -->
     <div id="popup-bar" class="popup-bar bg-gradient scheme-3 shadow d-none">
