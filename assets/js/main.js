@@ -41,44 +41,67 @@ Support : codings.dev
 ----------------------------------------------*/
 
 // #region Preloader
-updateTime();
+
 function updateTime() {
   const span = document.querySelector("#dynamic-time");
-  if(span){
+
+  if (span) {
     span.innerText = `${new Date().toLocaleString("en-US", {
       hour: "numeric",
       minute: "numeric",
       hour12: true,
     })}`;
-    $("#preloader p").addClass("visible");
+   
   }
- 
 }
+
+const tryToPlayVideoIntreval = setInterval(function () {
+
+  document
+    .getElementById("preload-video")
+    .play()
+    .then(() => {
+      updateTime();
+      clearInterval(tryToPlayVideoIntreval);
+      $("#preloader p").addClass("visible");
+    }).catch(error=>{});
+}, 1000);
+
 
 jQuery(function ($) {
   "use strict";
 
+  document.getElementById("preload-video").addEventListener(
+    "play",
+    () => {
+      //  Hide Time After 2.4s
+      setTimeout(function () {
+        $("#preloader p").removeClass("visible");
+      }, 2400);
+    },
+    false
+  );
   // close after Video End
-  // document.getElementById("preload-video").addEventListener(
-  //   "ended",
-  //   () => {
-  // var preloader = $("#preloader");
-  //     preloader.addClass("loaded");
-  //     document.body.style.overflow = "auto";
-  //     const next = document.querySelector(".slide-navigation-item-next");
-  //     next.click();
-  //   },
-  //   false
-  // );
+  document.getElementById("preload-video").addEventListener(
+    "ended",
+    () => {
+      var preloader = $("#preloader");
+      preloader.addClass("loaded");
+      document.body.style.overflow = "auto";
+      const next = document.querySelector(".slide-navigation-item-next");
+      next.click();
+    },
+    false
+  );
 
-  // close after one Second
-  setTimeout(function () {
-    var preloader = $("#preloader");
-    preloader.addClass("loaded");
-    document.body.style.overflow = "auto";
-    const next = document.querySelector(".slide-navigation-item-next");
-    next.click();
-  }, 3000);
+  // // close after one Second
+  // setTimeout(function () {
+  //   var preloader = $("#preloader");
+  //   preloader.addClass("loaded");
+  //   document.body.style.overflow = "auto";
+  //   const next = document.querySelector(".slide-navigation-item-next");
+  //   next.click();
+  // }, 3000);
 });
 
 // #endregion Preloader
@@ -2247,7 +2270,7 @@ helpForm.addEventListener("submit", async (event) => {
   const name = helpNameInput.value;
   const email = helpEmailInput.value;
   const message = helpMessageInput.value;
-  const comeFrom = document.querySelector("[name='InputRadio']:checked").value;
+
   if (name && email && isValidEmail(email) && message) {
     try {
       const result = await fetch(sendMailLink, {
@@ -2257,7 +2280,7 @@ helpForm.addEventListener("submit", async (event) => {
         },
         body: JSON.stringify({
           subject: "Help",
-          mailBody: { name, email, message, comeFrom },
+          mailBody: { name, email, message },
         }),
       });
       if (result.status === 200) {
