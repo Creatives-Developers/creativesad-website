@@ -51,16 +51,20 @@ function updateTime() {
       minute: "numeric",
       hour12: true,
     })}`;
-      $("#preloader p").addClass("visible");
-        //  Hide Time After 2.4s
-      setTimeout(function () {
-        $("#preloader p").removeClass("visible");
-      }, 2400);
   }
 }
-  updateTime();
-
-
+updateTime();
+document.getElementById("preload-video").addEventListener(
+  "play",
+  () => {
+    $("#preloader p").addClass("visible");
+    //  Hide Time After 2.4s
+    setTimeout(function () {
+      $("#preloader p").removeClass("visible");
+    }, 2400);
+  },
+  false
+);
 
 jQuery(function ($) {
   "use strict";
