@@ -51,36 +51,20 @@ function updateTime() {
       minute: "numeric",
       hour12: true,
     })}`;
-   
+      $("#preloader p").addClass("visible");
+        //  Hide Time After 2.4s
+      setTimeout(function () {
+        $("#preloader p").removeClass("visible");
+      }, 2400);
   }
 }
+  updateTime();
 
-const tryToPlayVideoIntreval = setInterval(function () {
-
-  document
-    .getElementById("preload-video")
-    .play()
-    .then(() => {
-      updateTime();
-      clearInterval(tryToPlayVideoIntreval);
-      $("#preloader p").addClass("visible");
-    }).catch(error=>{});
-}, 1000);
 
 
 jQuery(function ($) {
   "use strict";
 
-  document.getElementById("preload-video").addEventListener(
-    "play",
-    () => {
-      //  Hide Time After 2.4s
-      setTimeout(function () {
-        $("#preloader p").removeClass("visible");
-      }, 2400);
-    },
-    false
-  );
   // close after Video End
   document.getElementById("preload-video").addEventListener(
     "ended",

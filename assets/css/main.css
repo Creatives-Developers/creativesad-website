@@ -433,7 +433,7 @@ Support : codings.dev
 @media (max-width: 991px) {
   .basic-intro .text-1,
   .basic-intro .text-2 {
-    display: block;
+    /* display: block; */
   }
 
   .side-intro .text-2 {
@@ -4053,7 +4053,7 @@ table {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 15%;
+  height: 8%;
   background-color: var(--color);
 }
 
@@ -5083,12 +5083,22 @@ table {
   width: 10%;
   opacity: 1;
 }
+
+
 .carousel-control-next span,
 .carousel-control-prev span {
-  background-color: #005889;
-  width: 45px;
-  height: 45px;
-  background-size: 75%;
+ 
+  background:none
+}
+.carousel-control-next span i,
+.carousel-control-prev span i{
+  color: #005889;
+  font-size:25px;
+  transition: all 0.5s ease-in-out;
 }
 
+.carousel-control-next span:hover i,
+.carousel-control-prev span:hover i{
+  font-size:30px
+}
 /* End Service Customizing  */

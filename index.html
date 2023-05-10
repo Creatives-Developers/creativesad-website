@@ -78,7 +78,7 @@
     <!-- Preloader -->
     <div id="preloader" class="video-container preloader black">
       <p>It's <span id="dynamic-time">00:00</span></p>
-      <video id="preload-video"  >
+      <video id="preload-video" autoplay muted >
         <source src="assets/videos/logo-intro.mp4" type="video/mp4" />
       </video>
     </div>
@@ -431,7 +431,7 @@
               >Introducing</span
             >
             <div class="slide-description">
-              <span class="text-2 text-style-4 text-italic black">
+              <span class="text-2 text-style-4 text-italic black" style="color:white">
                 ـــــ
                 <mark class="animated-underline primary"> C&D</mark>!</span
               >
@@ -1530,7 +1530,9 @@
                 <span
                   class="carousel-control-prev-icon"
                   aria-hidden="true"
-                ></span>
+                >
+                <i class="fa fa-angle-left"></i>
+              </span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button
@@ -1542,7 +1544,9 @@
                 <span
                   class="carousel-control-next-icon"
                   aria-hidden="true"
-                ></span>
+                >
+                <i class="fa fa-angle-right"></i>
+              </span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
