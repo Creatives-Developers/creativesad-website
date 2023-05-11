@@ -5102,3 +5102,8 @@ table {
   font-size:30px
 }
 /* End Service Customizing  */
+
+
+.fixed-height{
+  height: 240px!important;
+}
