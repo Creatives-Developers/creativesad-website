@@ -4825,9 +4825,9 @@ table {
 .shock-footer .footer-content .nav-link .text {
   background: linear-gradient(
     to right,
-    var(--color),
-    var(--color) 50%,
-    var(--gray-color) 50%
+    var(--gray-color),
+    var(--gray-color) 50%,
+    var(--bs-white) 50%
   );
   background-clip: text;
   -webkit-background-clip: text;
@@ -4849,8 +4849,8 @@ table {
 }
 
 .shock-footer .footer-content .nav-link.has-icon:hover .image-icon {
-  fill: var(--color);
-  stroke: var(--color);
+  fill: var(--gray-color);
+  stroke: var(--gray-color);
 }
 
 .shock-footer .footer-content .nav-link.has-icon {
@@ -4867,8 +4867,8 @@ table {
   margin-right: 10px;
   width: auto;
   height: 1rem;
-  fill: var(--gray-color);
-  stroke: var(--gray-color);
+  fill: var(--bs-white);
+  stroke: var(--bs-white);
 }
 
 .shock-footer .footer-content .footer-image {
@@ -5078,6 +5078,19 @@ table {
   padding: 30px 10vw;
 }
 
+.service-carousel-item .description p{
+  position: relative;
+}
+
+.service-carousel-item .description p::before{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    background: var(--gray-color);
+    left: -15px;
+    top: 12px;
+  }
 
 .carousel-control-next,
 .carousel-control-prev {
