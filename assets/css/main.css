@@ -4825,8 +4825,8 @@ table {
 .shock-footer .footer-content .nav-link .text {
   background: linear-gradient(
     to right,
-    var(--gray-color),
-    var(--gray-color) 50%,
+    var(--secondary-color),
+    var(--secondary-color) 50%,
     var(--bs-white) 50%
   );
   background-clip: text;
@@ -4836,7 +4836,7 @@ table {
   background-position: 100%;
   transition: background-position 0.4s ease;
   font-weight: 700;
-  color: var(--gray-color);
+  color: var(--secondary-color);
 }
 
 .shock-footer .footer-content .nav-link:hover .text {
@@ -4849,8 +4849,8 @@ table {
 }
 
 .shock-footer .footer-content .nav-link.has-icon:hover .image-icon {
-  fill: var(--gray-color);
-  stroke: var(--gray-color);
+  fill: var(--secondary-color);
+  stroke: var(--secondary-color);
 }
 
 .shock-footer .footer-content .nav-link.has-icon {
@@ -4979,15 +4979,16 @@ table {
   font-size: 0.85rem;
   letter-spacing: 1px;
   text-align: center;
-  opacity: 0.5;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  color: var(--white-color);
 }
 
 .shock-footer .bottom-bar:hover .text {
   opacity: 1;
+  
 }
 
 @media (max-width: 991px) {
