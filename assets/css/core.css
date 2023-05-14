@@ -1891,6 +1891,10 @@ svg {
   mix-blend-mode: difference;
 }
 
+.mix-blend-multiply {
+  mix-blend-mode: multiply;
+}
+
 .mix-blend-dodge {
   mix-blend-mode: color-dodge;
 }
