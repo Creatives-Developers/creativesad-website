@@ -5085,7 +5085,7 @@ table {
 .service-carousel-item .description p::before{
     content: "";
     position: absolute;
-    width: 10px;
+    width: 5px;
     height: 2px;
     background: var(--gray-color);
     left: -15px;
