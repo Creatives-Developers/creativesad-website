@@ -2201,7 +2201,7 @@ function isValidEmail(email) {
 const subscriptionForm = document.getElementById("subscribtion-form");
 const nameInput = document.getElementById("InputFloatingName");
 const emailInput = document.getElementById("InputFloatingEmail");
-const agreeWithTerms = document.getElementById("InputCheckbox");
+
 
 const resetSubscriptionForm = () => {
   subscriptionForm.reset();
@@ -2217,7 +2217,7 @@ subscriptionForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = nameInput.value;
   const email = emailInput.value;
-  if (name && email && isValidEmail(email) && agreeWithTerms.checked) {
+  if (name && email && isValidEmail(email) ) {
     try {
       const result = await fetch(sendMailLink, {
         method: "POST",
