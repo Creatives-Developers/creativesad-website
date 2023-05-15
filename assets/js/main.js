@@ -53,14 +53,29 @@ function updateTime() {
     })}`;
   }
 }
+
+function setVideoSource() {
+  const windowWidth = window.innerWidth;
+  const windowHeight = window.innerHeight;
+  const videoElement  = document.getElementById("preload-video")
+  const videoSource   = document.querySelector("#preload-video source")
+  if (windowWidth > windowHeight) {
+    videoSource.src = 'assets/videos/logo-intro.mp4';
+  } else {
+    videoSource.src = 'assets/videos/logo-intro-real.mp4';
+  }
+
+  videoElement.load();
+}
+setVideoSource()
 updateTime();
 document.getElementById("preload-video").addEventListener(
   "play",
   () => {
-    $("#preloader p").addClass("visible");
+    $("#preloader div").addClass("visible");
     //  Hide Time After 2.4s
     setTimeout(function () {
-      $("#preloader p").removeClass("visible");
+      $("#preloader div").removeClass("visible");
     }, 2400);
   },
   false
