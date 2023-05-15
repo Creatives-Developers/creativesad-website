@@ -630,7 +630,7 @@ Support : codings.dev
 }
 
 .swiper.gapped:before {
-  content: "";
+  /* content: ""; */
   position: absolute;
   z-index: 2;
   top: 0;
@@ -641,7 +641,7 @@ Support : codings.dev
 }
 
 .swiper.gapped:after {
-  content: "";
+  /* content: ""; */
   position: absolute;
   z-index: 2;
   top: 0;
@@ -669,6 +669,7 @@ Support : codings.dev
 .swiper .swiper-slide .image {
   width: 100%;
   display: block;
+  min-width: 200px;
 }
 
 .swiper .swiper-slide .image.large {
@@ -4988,7 +4989,6 @@ table {
 
 .shock-footer .bottom-bar:hover .text {
   opacity: 1;
-  
 }
 
 @media (max-width: 991px) {
@@ -5047,7 +5047,7 @@ table {
 .video-container video {
   position: fixed;
   inset: 50% 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   z-index: 999999;
   width: 100%;
 }
@@ -5055,7 +5055,7 @@ table {
 .video-container div {
   position: fixed;
   z-index: 9999999;
-  color:var(--primary-color);
+  color: var(--primary-color);
   inset: 60% 0%;
   font-size: 30px;
   font-weight: bold;
@@ -5064,19 +5064,18 @@ table {
   transition: all 1s ease-in-out;
   opacity: 0;
 }
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
   .video-container div {
     font-size: 18px;
   }
 }
-
 
 .video-container div.visible {
   opacity: 1;
 }
 
 .video-container div p span {
-  color:var(	--secondary-color);
+  color: var(--secondary-color);
 }
 
 /* #endregion Video Preload  region*/
@@ -5086,19 +5085,19 @@ table {
   padding: 30px 10vw;
 }
 
-.service-carousel-item .description p{
+.service-carousel-item .description p {
   position: relative;
 }
 
-.service-carousel-item .description p::before{
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 2px;
-    background: var(--gray-color);
-    left: -15px;
-    top: 12px;
-  }
+.service-carousel-item .description p::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 2px;
+  background: var(--gray-color);
+  left: -15px;
+  top: 12px;
+}
 
 .carousel-control-next,
 .carousel-control-prev {
@@ -5106,26 +5105,23 @@ table {
   opacity: 1;
 }
 
-
 .carousel-control-next span,
 .carousel-control-prev span {
- 
-  background:none
+  background: none;
 }
 .carousel-control-next span i,
-.carousel-control-prev span i{
+.carousel-control-prev span i {
   color: #005889;
-  font-size:25px;
+  font-size: 25px;
   transition: all 0.5s ease-in-out;
 }
 
 .carousel-control-next span:hover i,
-.carousel-control-prev span:hover i{
-  font-size:30px
+.carousel-control-prev span:hover i {
+  font-size: 30px;
 }
 /* End Service Customizing  */
 
-
-.fixed-height{
-  height: 240px!important;
+.fixed-height {
+  height: 240px !important;
 }
