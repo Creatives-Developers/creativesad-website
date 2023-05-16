@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 .text-style-10 { font-size: 1.75rem; font-weight: 100; }
 .text-style-11 { font-size: 1.2rem; font-weight: 700; }
 .text-style-12 { font-size: 1.2rem; font-weight: 400; }
-
+.font-weight-200 { font-weight: 200; }
 @media (max-width: 767px) {
 	.text-style-1 { font-size: 3rem; }
 	.text-style-2 { font-size: 3rem; }

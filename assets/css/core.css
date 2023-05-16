@@ -1694,6 +1694,11 @@ svg {
   -webkit-text-stroke-width: 1px;
 }
 
+.text-outline-2 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+}
+
 .text-offset {
   position: relative;
   display: flex;

@@ -4392,7 +4392,7 @@ table {
 .scrolling-text .text-wrapper .text {
   margin: 0;
   line-height: 1;
-  color: var(--color);
+  color: var(--primary-color);
 }
 
 .scrolling-text .text-wrapper .text:first-child {
@@ -5080,6 +5080,10 @@ table {
   color: var(--secondary-color);
 }
 
+
+.video-container div p {
+  margin-top: 15px;
+}
 /* #endregion Video Preload  region*/
 
 /* Start Service Customizing  */
@@ -5127,4 +5131,11 @@ table {
 .fixed-height {
   height: 240px !important;
   
+}
+
+
+
+#narrative{
+  margin-top: 30px;
+  overflow: hidden;
 }
