@@ -712,7 +712,7 @@ Support : codings.dev
 
 .swiper .swiper-button-next:hover,
 .swiper .swiper-button-prev:hover {
-  background-color: var(--color-2);
+  background-color: var(--primary-color);
   color: var(--color-4);
 }
 
@@ -789,7 +789,7 @@ Support : codings.dev
   vertical-align: middle;
   border-radius: 50%;
   border: 2px solid;
-  border-color: var(--color-1);
+  border-color: var(--primary-color);
   background-color: transparent;
   opacity: 0.25;
   -webkit-transition: all 0.3s ease-in-out;
@@ -809,8 +809,8 @@ Support : codings.dev
   width: 14px;
   height: 14px;
   border: 2px solid;
-  border-color: var(--color);
-  background-color: var(--color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
   opacity: 1;
 }
 
@@ -5136,6 +5136,7 @@ table {
 
 
 #narrative{
-  margin-top: 30px;
+  margin-top: 50px;
   overflow: hidden;
+  padding-top: 50px;
 }
