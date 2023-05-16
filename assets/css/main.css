@@ -1951,11 +1951,50 @@ button {
   opacity: 1;
 }
 
+.service-card {
+  position:relative;
+
+}
+
+.service-card .holder{
+  position: absolute;
+  bottom: 20px;
+  left: 10%;
+  width: 80%;
+  height: 60px;
+  transition: all 0.5s ease;
+}
+.service-card .holder .service-description{
+  padding: 10px;
+  opacity: 0;
+  transition: all 0.5s ease;
+  color:var(--white-color);
+  text-align:start ;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+.service-card:hover .holder{
+  bottom: 10%;
+  height: 50%;
+  background: var(--primary-color);
+
+}
+
+.service-card:hover .holder p{
+  opacity: 1;
+  
+}
+
 .service-card:nth-child(2n+2)   .card.has-full-image .overlay{
 
   background: -webkit-linear-gradient(180deg, transparent 0%, var(--secondary-color) 90%);
   background: -o-linear-gradient(180deg, transparent 0%, var(--secondary-color) 90%);
   background: linear-gradient(180deg, transparent 0%, var(--secondary-color) 90%);
+}
+
+.service-card:nth-child(2n+2):hover .holder{
+  background: var(--secondary-color);
 }
 
 
@@ -4733,7 +4772,7 @@ table {
 /* #region Footer */
 
 :root .shock-footer.scheme-1 {
-  --color-1: var(--black-color);
+  --color-1: #005a8c;
   --color-2: var(--white-color);
   --color-3: var(--white-10-color);
 }
