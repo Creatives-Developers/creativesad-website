@@ -5187,3 +5187,31 @@ table {
   overflow: hidden;
   padding-top: 50px;
 }
+
+
+/* Start Customize Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  transition: 0.5s;
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+
+  background: var(--secondary-color);
+}
+
+/* End Customize Scrollbar */
