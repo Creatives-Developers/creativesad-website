@@ -1389,24 +1389,26 @@ async function loadParticals() {
           this.canvas.width = this.width;
           this.canvas.height = this.height;
           this.canvas.style.display = "";
-        }
-        this._initOrigins();
-        this._initParticles();
-        if (this.state !== "running") {
-          this.state = "running";
-          if (!this.disableInteraction) {
-            if ("ontouchstart" in window || window.navigator.msPointerEnabled) {
-              document.body.addEventListener("touchstart", this._touchHandler);
-              document.body.addEventListener("touchmove", this._touchHandler);
-              document.body.addEventListener("touchend", this._clearTouches);
-              document.body.addEventListener("touchcancel", this._clearTouches);
-            } else {
-              this.canvas.addEventListener("mousemove", this._mouseHandler);
-              this.canvas.addEventListener("mouseout", this._clearTouches);
+          this._initOrigins();
+          this._initParticles();
+          if (this.state !== "running") {
+            this.state = "running";
+            if (!this.disableInteraction) {
+              if ("ontouchstart" in window || window.navigator.msPointerEnabled) {
+                document.body.addEventListener("touchstart", this._touchHandler);
+                document.body.addEventListener("touchmove", this._touchHandler);
+                document.body.addEventListener("touchend", this._clearTouches);
+                document.body.addEventListener("touchcancel", this._clearTouches);
+              } else {
+                this.canvas?.addEventListener("mousemove", this._mouseHandler);
+                this.canvas?.addEventListener("mouseout", this._clearTouches);
+              }
             }
+            this._animate();
           }
-          this._animate();
         }
+        
+       
       }
 
       stop(optionsParam) {
