@@ -57,17 +57,17 @@ function updateTime() {
 function setVideoSource() {
   const windowWidth = window.innerWidth;
   const windowHeight = window.innerHeight;
-  const videoElement  = document.getElementById("preload-video")
-  const videoSource   = document.querySelector("#preload-video source")
+  const videoElement = document.getElementById("preload-video");
+  const videoSource = document.querySelector("#preload-video source");
   if (windowWidth > windowHeight) {
-    videoSource.src = 'assets/videos/logo-intro.mp4';
+    videoSource.src = "assets/videos/logo-intro.mp4";
   } else {
-    videoSource.src = 'assets/videos/logo-intro-real.mp4';
+    videoSource.src = "assets/videos/logo-intro-real.mp4";
   }
 
   videoElement.load();
 }
-setVideoSource()
+setVideoSource();
 updateTime();
 document.getElementById("preload-video").addEventListener(
   "play",
@@ -80,7 +80,6 @@ document.getElementById("preload-video").addEventListener(
   },
   false
 );
-
 
 jQuery(function ($) {
   "use strict";
@@ -1394,11 +1393,20 @@ async function loadParticals() {
           if (this.state !== "running") {
             this.state = "running";
             if (!this.disableInteraction) {
-              if ("ontouchstart" in window || window.navigator.msPointerEnabled) {
-                document.body.addEventListener("touchstart", this._touchHandler);
+              if (
+                "ontouchstart" in window ||
+                window.navigator.msPointerEnabled
+              ) {
+                document.body.addEventListener(
+                  "touchstart",
+                  this._touchHandler
+                );
                 document.body.addEventListener("touchmove", this._touchHandler);
                 document.body.addEventListener("touchend", this._clearTouches);
-                document.body.addEventListener("touchcancel", this._clearTouches);
+                document.body.addEventListener(
+                  "touchcancel",
+                  this._clearTouches
+                );
               } else {
                 this.canvas?.addEventListener("mousemove", this._mouseHandler);
                 this.canvas?.addEventListener("mouseout", this._clearTouches);
@@ -1407,8 +1415,6 @@ async function loadParticals() {
             this._animate();
           }
         }
-        
-       
       }
 
       stop(optionsParam) {
@@ -2219,7 +2225,6 @@ const subscriptionForm = document.getElementById("subscribtion-form");
 const nameInput = document.getElementById("InputFloatingName");
 const emailInput = document.getElementById("InputFloatingEmail");
 
-
 const resetSubscriptionForm = () => {
   subscriptionForm.reset();
   document
@@ -2234,7 +2239,7 @@ subscriptionForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = nameInput.value;
   const email = emailInput.value;
-  if (name && email && isValidEmail(email) ) {
+  if (name && email && isValidEmail(email)) {
     try {
       const result = await fetch(sendMailLink, {
         method: "POST",
@@ -2303,3 +2308,41 @@ helpForm.addEventListener("submit", async (event) => {
 });
 
 /* End Help Form Submition */
+
+/* Trusted By Loading */
+const companies = [
+  { url: "assets/images/clients/2.png", alt: "Nissan Logo" },
+  { url: "assets/images/clients/3.png", alt: "Umbro Logo" },
+  { url: "assets/images/clients/4.png", alt: "Skechers Logo" },
+  { url: "assets/images/clients/8.png", alt: "Petro Min" },
+  { url: "assets/images/clients/9.png", alt: "AstraZeneca" },
+  { url: "assets/images/clients/10.png", alt: "MOH Logo" },
+  { url: "assets/images/clients/11.png", alt: "E&S Logo" },
+  { url: "assets/images/clients/12.png", alt: "Takeda Logo" },
+  { url: "assets/images/clients/13.png", alt: "Saudi Logo" },
+  { url: "assets/images/clients/14.png", alt: "Mundipharma Logo" },
+  { url: "assets/images/clients/15.png", alt: "novo logo" },
+  { url: "assets/images/clients/16.png", alt: "abbvie Logo" },
+  { url: "assets/images/clients/17.png", alt: "Lilly Logo" },
+  { url: "assets/images/clients/18.png", alt: "Sobl Logo" },
+  { url: "assets/images/clients/19.png", alt: "Merok Logo" },
+  { url: "assets/images/clients/20.png", alt: "SOS Logo" },
+  { url: "assets/images/clients/21.png", alt: "Allergan Aeshetics Logo" },
+  { url: "assets/images/clients/22.png", alt: "Sobl Logo" },
+  { url: "assets/images/clients/23.png", alt: "Amgen Logo" },
+  { url: "assets/images/clients/24.png", alt: "SSCP Logo" },
+  { url: "assets/images/clients/25.png", alt: "Bayer Logo" },
+  { url: "assets/images/clients/26.png", alt: "Juniper Biologies" },
+  { url: "assets/images/clients/27.png", alt: "Menarini Logo" },
+  { url: "assets/images/clients/28.png", alt: "Abbott Logo" },
+];
+const container = $("#trusted-by-container");
+
+companies.forEach((image) => {
+  container.append(`
+      <div class="swiper-slide">
+          <div class="image-wrapper">
+            <img src="${image.url}" class="image hover-up-down" alt="${image.alt}" />
+          </div>
+      </div>`);
+});
